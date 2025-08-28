@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Star, Zap, Shield, CreditCard, Home, Gift } from "lucide-react";
 import cleanSaleBanner from "@/assets/clean-sale-banner.jpg";
+import auxLogo from "@/assets/brands/aux-logo.jpg";
+import sharpLogo from "@/assets/brands/sharp-logo.jpg";
+import panasonicLogo from "@/assets/brands/panasonic-logo.jpg";
+import lloydLogo from "@/assets/brands/lloyd-logo.jpg";
+import whiteWestinghouseLogo from "@/assets/brands/white-westinghouse-logo.jpg";
 
 const EndOfSeasonSale = () => {
   return (
@@ -66,93 +71,87 @@ const EndOfSeasonSale = () => {
             </CardContent>
           </Card>
 
-          {/* Featured Models Card */}
+          {/* Premium Brands Card */}
           <Card className="hover:shadow-[var(--shadow-card)] transition-all duration-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Star className="h-5 w-5 text-accent-warm" />
-                Featured Sale Models
+                Premium Brands on Sale
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-3">
-                <div className="bg-muted rounded-lg p-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h5 className="font-semibold">AUX 1.6 Ton Hot & Cold</h5>
-                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />
-                      4 Star
+              <div className="space-y-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-card border rounded-lg p-4 hover:shadow-lg transition-all duration-300 group">
+                    <img 
+                      src={auxLogo} 
+                      alt="AUX Brand" 
+                      className="w-full h-12 object-contain mb-3 group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="text-center">
+                      <p className="text-sm font-semibold">AUX</p>
+                      <p className="text-xs text-muted-foreground">From ₹30,000</p>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">6 Units Available</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm line-through text-muted-foreground">₹42,000</span>
-                    <span className="font-bold text-xl text-accent-warm">₹30,000/-</span>
+                  <div className="bg-card border rounded-lg p-4 hover:shadow-lg transition-all duration-300 group">
+                    <img 
+                      src={sharpLogo} 
+                      alt="Sharp Brand" 
+                      className="w-full h-12 object-contain mb-3 group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="text-center">
+                      <p className="text-sm font-semibold">Sharp</p>
+                      <p className="text-xs text-muted-foreground">From ₹28,000</p>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="bg-muted rounded-lg p-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h5 className="font-semibold">Sharp 1 Ton</h5>
-                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />
-                      4 Star
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-card border rounded-lg p-4 hover:shadow-lg transition-all duration-300 group">
+                    <img 
+                      src={lloydLogo} 
+                      alt="Lloyd Brand" 
+                      className="w-full h-12 object-contain mb-3 group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="text-center">
+                      <p className="text-sm font-semibold">Lloyd</p>
+                      <p className="text-xs text-muted-foreground">From ₹31,000</p>
                     </div>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm line-through text-muted-foreground">₹38,000</span>
-                    <span className="font-bold text-xl text-accent-warm">₹28,000/-</span>
+                  <div className="bg-card border rounded-lg p-4 hover:shadow-lg transition-all duration-300 group">
+                    <img 
+                      src={panasonicLogo} 
+                      alt="Panasonic Brand" 
+                      className="w-full h-12 object-contain mb-3 group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="text-center">
+                      <p className="text-sm font-semibold">Panasonic</p>
+                      <p className="text-xs text-muted-foreground">From ₹35,500</p>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="bg-muted rounded-lg p-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h5 className="font-semibold">Lloyd 1.5 Ton Inverter</h5>
-                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />
-                      3 Star
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">16 Units Available</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm line-through text-muted-foreground">₹42,000</span>
-                    <span className="font-bold text-xl text-accent-warm">₹31,000/-</span>
-                  </div>
-                </div>
-                
-                <div className="bg-muted rounded-lg p-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h5 className="font-semibold">AUX 2T Inverter</h5>
-                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />
-                      3 Star
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-bold text-xl text-accent-warm">₹33,000/-</span>
-                  </div>
-                </div>
-                
-                <div className="bg-muted rounded-lg p-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h5 className="font-semibold">WW 2T Inverter</h5>
-                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />
-                      3 Star
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">2 Units Available</p>
-                  <div className="flex justify-between items-center">
-                    <span className="font-bold text-xl text-accent-warm">₹35,000/-</span>
+                <div className="bg-card border rounded-lg p-4 hover:shadow-lg transition-all duration-300 group">
+                  <img 
+                    src={whiteWestinghouseLogo} 
+                    alt="White Westinghouse Brand" 
+                    className="w-full h-12 object-contain mb-3 group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="text-center">
+                    <p className="text-sm font-semibold">White Westinghouse</p>
+                    <p className="text-xs text-muted-foreground">From ₹35,000</p>
                   </div>
                 </div>
                 
                 <div className="bg-muted rounded-lg p-4 text-center">
-                  <div className="flex justify-between items-start mb-2">
-                    <h5 className="font-semibold">Panasonic 2 Ton Inverter</h5>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-bold text-xl text-accent-warm">₹35,500/-</span>
+                  <p className="font-semibold text-sm mb-2">All models available with</p>
+                  <div className="flex items-center justify-center gap-4 text-xs">
+                    <span className="flex items-center gap-1">
+                      <Star className="h-3 w-3 text-accent-warm" />
+                      3-5 Star Rating
+                    </span>
+                    <span>1-2 Ton Capacity</span>
+                    <span>Inverter & Non-Inverter</span>
                   </div>
                 </div>
               </div>
