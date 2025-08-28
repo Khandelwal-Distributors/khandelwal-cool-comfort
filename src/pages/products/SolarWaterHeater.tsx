@@ -153,7 +153,7 @@ const SolarWaterHeater = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {applications.map((app, index) => (
                 <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <div className="text-primary mx-auto mb-2">
+                  <div className="text-primary mx-auto mb-2 flex justify-center">
                     {app.icon}
                   </div>
                   <span className="font-medium">{app.name}</span>
