@@ -7,9 +7,16 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <h1 className="text-2xl font-bold text-primary">
-              Khandelwal Distributors
-            </h1>
+            <div className="flex items-center space-x-2">
+              <img 
+                src="/lovable-uploads/253ff299-0035-4525-90a9-5b15b36d4e69.png" 
+                alt="Khandelwal Distributors Logo" 
+                className="w-10 h-10"
+              />
+              <h1 className="text-2xl font-bold text-primary">
+                Khandelwal Distributors
+              </h1>
+            </div>
             <p className="text-sm text-muted-foreground hidden md:block">
               HVAC • Air Conditioning • Commercial Projects
             </p>

@@ -5,6 +5,7 @@ import ProductCategories from "@/components/ProductCategories";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import EndOfSeasonSale from "@/components/EndOfSeasonSale";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
         <Hero />
         <BrandShowcase />
         <ProductCategories />
+        <EndOfSeasonSale />
         <Services />
         <Contact />
       </main>

@@ -18,7 +18,13 @@ import coldRoom from "@/assets/cold-room.jpg";
 import ahuSystem from "@/assets/ahu-system.jpg";
 import alkalineRo from "@/assets/alkaline-ro.jpg";
 import solarWaterHeater from "@/assets/solar-water-heater.jpg";
-import saleBanner from "@/assets/sale-banner.jpg";
+import floorStandingAc from "@/assets/floor-standing-ac.jpg";
+import cleanSaleBanner from "@/assets/clean-sale-banner.jpg";
+import vrvSystem from "@/assets/vrv-system.jpg";
+import chillerSystem from "@/assets/chiller-system.jpg";
+import heatPump from "@/assets/heat-pump.jpg";
+import ductableAc from "@/assets/ductable-ac.jpg";
+import EndOfSeasonSale from "@/components/EndOfSeasonSale";
 
 const Products = () => {
   const productCategories = [
@@ -101,32 +107,6 @@ const Products = () => {
       ]
     },
     {
-      id: "cold-rooms",
-      title: "Cold Rooms & Storage",
-      description: "Commercial refrigeration and cold storage solutions",
-      image: coldRoom,
-      icon: <Thermometer className="h-6 w-6" />,
-      brands: ["Daikin", "Carrier", "Blue Star"],
-      products: [
-        { name: "Daikin Cold Room", capacity: "10x10 ft", rating: "Commercial", price: "₹2,50,000" },
-        { name: "Carrier Storage Unit", capacity: "8x12 ft", rating: "Industrial", price: "₹3,00,000" },
-        { name: "Blue Star Freezer Room", capacity: "12x15 ft", rating: "Commercial", price: "₹4,50,000" }
-      ]
-    },
-    {
-      id: "ahu-systems",
-      title: "Air Handling Units (AHU)",
-      description: "Daikin AHU systems for large commercial HVAC applications",
-      image: ahuSystem,
-      icon: <Wind className="h-6 w-6" />,
-      brands: ["Daikin"],
-      products: [
-        { name: "Daikin AHU-5000", capacity: "5000 CFM", rating: "Commercial", price: "₹1,25,000" },
-        { name: "Daikin AHU-8000", capacity: "8000 CFM", rating: "Industrial", price: "₹1,80,000" },
-        { name: "Daikin AHU-12000", capacity: "12000 CFM", rating: "Heavy Duty", price: "₹2,50,000" }
-      ]
-    },
-    {
       id: "alkaline-ro",
       title: "Alkaline Water RO Systems",
       description: "Advanced alkaline water purification with RO technology",
@@ -150,6 +130,19 @@ const Products = () => {
         { name: "Inter Solar 100L", capacity: "100 Liters", rating: "Residential", price: "₹25,000" },
         { name: "Inter Solar 200L", capacity: "200 Liters", rating: "Family", price: "₹35,000" },
         { name: "Inter Solar 300L", capacity: "300 Liters", rating: "Commercial", price: "₹45,000" }
+      ]
+    },
+    {
+      id: "floor-standing-ac",
+      title: "Floor Standing Air Conditioners",
+      description: "Powerful floor-mounted ACs for large spaces",
+      image: floorStandingAc,
+      icon: <Wind className="h-6 w-6" />,
+      brands: ["Daikin", "Carrier", "Mitsubishi Heavy"],
+      products: [
+        { name: "Daikin Floor Standing", capacity: "3 Ton", rating: "5 Star", price: "₹1,20,000" },
+        { name: "Carrier Floor Mount", capacity: "4 Ton", rating: "4 Star", price: "₹1,40,000" },
+        { name: "Mitsubishi Heavy Floor", capacity: "5 Ton", rating: "5 Star", price: "₹1,60,000" }
       ]
     },
     {
@@ -283,22 +276,79 @@ const Products = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {[
-                { title: "VRV Systems", brand: "Daikin Exclusive", description: "Variable Refrigerant Volume systems" },
-                { title: "Chillers", brand: "Multi-Brand", description: "Industrial cooling solutions" },
-                { title: "Heat Pumps", brand: "Daikin & Carrier", description: "Energy-efficient heating" },
-                { title: "Ductable ACs", brand: "All Major Brands", description: "Central air conditioning" }
+                { 
+                  title: "VRV Systems", 
+                  brand: "Daikin Exclusive", 
+                  description: "Variable Refrigerant Volume systems for maximum efficiency",
+                  image: vrvSystem,
+                  products: ["Multi-zone control", "Energy recovery", "Heat pump technology"]
+                },
+                { 
+                  title: "Chillers", 
+                  brand: "Multi-Brand", 
+                  description: "Industrial cooling solutions for large facilities",
+                  image: chillerSystem,
+                  products: ["Water-cooled chillers", "Air-cooled systems", "Modular designs"]
+                },
+                { 
+                  title: "Heat Pumps", 
+                  brand: "Daikin & Carrier", 
+                  description: "Energy-efficient heating and cooling systems",
+                  image: heatPump,
+                  products: ["Inverter technology", "All-season comfort", "Eco-friendly refrigerant"]
+                },
+                { 
+                  title: "Ductable ACs", 
+                  brand: "All Major Brands", 
+                  description: "Central air conditioning with concealed installation",
+                  image: ductableAc,
+                  products: ["Concealed design", "Uniform cooling", "Centralized control"]
+                },
+                { 
+                  title: "Cold Rooms & Storage", 
+                  brand: "Daikin, Carrier, Blue Star", 
+                  description: "Commercial refrigeration and cold storage solutions",
+                  image: coldRoom,
+                  products: ["Walk-in freezers", "Temperature control", "Food grade materials"]
+                },
+                { 
+                  title: "Air Handling Units", 
+                  brand: "Daikin Exclusive", 
+                  description: "AHU systems for large commercial applications",
+                  image: ahuSystem,
+                  products: ["High CFM capacity", "Energy recovery", "Modular construction"]
+                }
               ].map((item, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4 bg-primary text-primary-foreground p-2 rounded-lg">
+                      <Wind className="h-5 w-5" />
+                    </div>
+                  </div>
                   <CardHeader>
                     <CardTitle className="text-lg text-primary">{item.title}</CardTitle>
                     <Badge variant="outline" className="mx-auto">{item.brand}</Badge>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                    <Button variant="ghost" size="sm" className="mt-3">
-                      Learn More
+                    <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
+                    <div className="space-y-2 mb-4">
+                      {item.products.map((product, pIndex) => (
+                        <div key={pIndex} className="flex items-center text-xs text-primary">
+                          <div className="w-2 h-2 bg-accent-warm rounded-full mr-2"></div>
+                          {product}
+                        </div>
+                      ))}
+                    </div>
+                    <Button variant="outline" size="sm" className="w-full">
+                      <Phone className="h-4 w-4" />
+                      Get Quote
                     </Button>
                   </CardContent>
                 </Card>
@@ -308,76 +358,7 @@ const Products = () => {
         </section>
 
         {/* End of Season Sale Section */}
-        <section className="py-16 bg-gradient-to-r from-red-500/90 to-orange-500/90 text-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                🔥 End of Season Sale 🔥
-              </h2>
-              <p className="text-xl mb-6">
-                Special discounts on premium AC brands - Limited time offer!
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                <img 
-                  src={saleBanner} 
-                  alt="Sale Banner"
-                  className="w-full h-32 object-cover rounded-lg mb-4"
-                />
-                <h3 className="text-2xl font-bold mb-2">Starting at ₹26,000/-</h3>
-                <div className="space-y-2 text-sm">
-                  <p><strong>Brands:</strong> AUX, Sharp, Panasonic, Lloyd, White Westinghouse</p>
-                  <p><strong>Capacity:</strong> 1 Ton, 1.5 Ton, 2 Ton</p>
-                  <p><strong>Rating:</strong> 3, 4, 5 Star</p>
-                  <p><strong>Type:</strong> Inverter & Non-Inverter</p>
-                  <p><strong>Function:</strong> Cooling & Heating+Cooling</p>
-                </div>
-                <Button variant="cta" className="mt-4 w-full">
-                  <Phone className="h-4 w-4" />
-                  Get Sale Price
-                </Button>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h4 className="text-xl font-bold mb-4">Featured Sale Models:</h4>
-                <div className="space-y-3">
-                  <div className="bg-white/20 rounded p-3">
-                    <h5 className="font-semibold">AUX Inverter 1.5 Ton</h5>
-                    <p className="text-sm">5 Star, Cooling + Heating</p>
-                    <p className="font-bold text-lg">₹28,000/-</p>
-                  </div>
-                  <div className="bg-white/20 rounded p-3">
-                    <h5 className="font-semibold">Sharp 1 Ton Non-Inverter</h5>
-                    <p className="text-sm">3 Star, Cooling Only</p>
-                    <p className="font-bold text-lg">₹26,000/-</p>
-                  </div>
-                  <div className="bg-white/20 rounded p-3">
-                    <h5 className="font-semibold">Panasonic 2 Ton Inverter</h5>
-                    <p className="text-sm">4 Star, Dual Function</p>
-                    <p className="font-bold text-lg">₹42,000/-</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h4 className="text-xl font-bold mb-4">Sale Benefits:</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>✅ Up to 30% Off MRP</li>
-                  <li>✅ Free Installation</li>
-                  <li>✅ 1 Year Service Warranty</li>
-                  <li>✅ Free Site Visit</li>
-                  <li>✅ EMI Options Available</li>
-                  <li>✅ Exchange Offers</li>
-                </ul>
-                <Button variant="outline" className="mt-4 w-full bg-white/20 border-white text-white hover:bg-white hover:text-primary">
-                  View All Sale Items
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <EndOfSeasonSale />
 
         {/* CTA Section */}
         <section className="py-16 bg-primary text-primary-foreground">
