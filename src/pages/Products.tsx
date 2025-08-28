@@ -19,6 +19,7 @@ import ahuSystem from "@/assets/ahu-system.jpg";
 import alkalineRo from "@/assets/alkaline-ro.jpg";
 import solarWaterHeater from "@/assets/solar-water-heater.jpg";
 import floorStandingAc from "@/assets/floor-standing-ac.jpg";
+import ventilationHrv from "@/assets/ventilation-hrv.jpg";
 import cleanSaleBanner from "@/assets/clean-sale-banner.jpg";
 import vrvSystem from "@/assets/vrv-system.jpg";
 import chillerSystem from "@/assets/chiller-system.jpg";
@@ -65,6 +66,19 @@ const Products = () => {
         { name: "Daikin FCVF50ARV16", capacity: "2 Ton", rating: "5 Star", price: "₹85,000" },
         { name: "Carrier Cassette 42KCC036", capacity: "3 Ton", rating: "3 Star", price: "₹95,000" },
         { name: "Mitsubishi Heavy Cassette", capacity: "2.5 Ton", rating: "4 Star", price: "₹90,000" }
+      ]
+    },
+    {
+      id: "floor-standing-ac",
+      title: "Floor Standing Air Conditioners",
+      description: "Powerful floor-mounted ACs for large spaces",
+      image: floorStandingAc,
+      icon: <Wind className="h-6 w-6" />,
+      brands: ["Daikin", "Carrier", "Mitsubishi Heavy"],
+      products: [
+        { name: "Daikin Floor Standing", capacity: "3 Ton", rating: "5 Star", price: "₹1,20,000" },
+        { name: "Carrier Floor Mount", capacity: "4 Ton", rating: "4 Star", price: "₹1,40,000" },
+        { name: "Mitsubishi Heavy Floor", capacity: "5 Ton", rating: "5 Star", price: "₹1,60,000" }
       ]
     },
     {
@@ -133,16 +147,16 @@ const Products = () => {
       ]
     },
     {
-      id: "floor-standing-ac",
-      title: "Floor Standing Air Conditioners",
-      description: "Powerful floor-mounted ACs for large spaces",
-      image: floorStandingAc,
+      id: "ventilation-hrv",
+      title: "Ventilation Fans & HRV Systems",
+      description: "Advanced ventilation and heat recovery solutions",
+      image: ventilationHrv,
       icon: <Wind className="h-6 w-6" />,
-      brands: ["Daikin", "Carrier", "Mitsubishi Heavy"],
+      brands: ["Daikin", "Astberg"],
       products: [
-        { name: "Daikin Floor Standing", capacity: "3 Ton", rating: "5 Star", price: "₹1,20,000" },
-        { name: "Carrier Floor Mount", capacity: "4 Ton", rating: "4 Star", price: "₹1,40,000" },
-        { name: "Mitsubishi Heavy Floor", capacity: "5 Ton", rating: "5 Star", price: "₹1,60,000" }
+        { name: "Daikin Heat Recovery Ventilator", capacity: "200 CFM", rating: "Energy Star", price: "₹45,000" },
+        { name: "Astberg Exhaust Fan", capacity: "150 CFM", rating: "Commercial", price: "₹15,000" },
+        { name: "Daikin Fresh Air System", capacity: "300 CFM", rating: "HEPA Filter", price: "₹65,000" }
       ]
     },
     {
