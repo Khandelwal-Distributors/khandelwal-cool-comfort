@@ -29,6 +29,9 @@ import FloorStandingAC from "./pages/products/FloorStandingAC";
 import HeatPump from "./pages/products/HeatPump";
 import AirPurifier from "./pages/products/AirPurifier";
 import VentilationHRV from "./pages/products/VentilationHRV";
+import DuctableAC from "./pages/products/DuctableAC";
+import ColdRoom from "./pages/products/ColdRoom";
+import AHUSystem from "./pages/products/AHUSystem";
 
 const queryClient = new QueryClient();
 
@@ -64,6 +67,9 @@ const App = () => (
             <Route path="/products/heat-pump" element={<HeatPump />} />
             <Route path="/products/air-purifier" element={<AirPurifier />} />
             <Route path="/products/ventilation-hrv" element={<VentilationHRV />} />
+            <Route path="/products/ductable-ac" element={<DuctableAC />} />
+            <Route path="/products/cold-room" element={<ColdRoom />} />
+            <Route path="/products/ahu-system" element={<AHUSystem />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

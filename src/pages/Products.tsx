@@ -213,70 +213,72 @@ const Products = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {productCategories.map((category) => (
-                <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={category.image} 
-                      alt={category.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4 bg-primary text-primary-foreground p-2 rounded-lg">
-                      {category.icon}
-                    </div>
-                  </div>
-                  
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold text-primary">
-                      {category.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground">
-                      {category.description}
-                    </CardDescription>
-                  </CardHeader>
-
-                  <CardContent className="space-y-4">
-                    {/* Brands */}
-                    <div>
-                      <h4 className="font-semibold mb-2 text-sm">Available Brands:</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {category.brands.map((brand) => (
-                          <Badge key={brand} variant="secondary" className="text-xs">
-                            {brand}
-                          </Badge>
-                        ))}
+                <Link key={category.id} to={`/products/${category.id === 'water-solutions' ? 'water-cooler' : category.id === 'air-purifiers' ? 'air-purifier' : category.id}`}>
+                  <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden h-full">
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={category.image} 
+                        alt={category.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 left-4 bg-primary text-primary-foreground p-2 rounded-lg">
+                        {category.icon}
                       </div>
                     </div>
+                  
+                    <CardHeader>
+                      <CardTitle className="text-xl font-bold text-primary">
+                        {category.title}
+                      </CardTitle>
+                      <CardDescription className="text-muted-foreground">
+                        {category.description}
+                      </CardDescription>
+                    </CardHeader>
 
-                    {/* Sample Products */}
-                    <div>
-                      <h4 className="font-semibold mb-2 text-sm">Featured Products:</h4>
-                      <div className="space-y-2">
-                        {category.products.slice(0, 2).map((product, index) => (
-                          <div key={index} className="bg-card border rounded-lg p-3">
-                            <div className="flex justify-between items-start mb-1">
-                              <h5 className="font-medium text-sm text-primary">
-                                {product.name}
-                              </h5>
-                              <div className="flex items-center gap-1">
-                                <Star className="h-3 w-3 fill-accent-warm text-accent-warm" />
-                                <span className="text-xs">{product.rating}</span>
+                    <CardContent className="space-y-4">
+                      {/* Brands */}
+                      <div>
+                        <h4 className="font-semibold mb-2 text-sm">Available Brands:</h4>
+                        <div className="flex flex-wrap gap-1">
+                          {category.brands.map((brand) => (
+                            <Badge key={brand} variant="secondary" className="text-xs">
+                              {brand}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Sample Products */}
+                      <div>
+                        <h4 className="font-semibold mb-2 text-sm">Featured Products:</h4>
+                        <div className="space-y-2">
+                          {category.products.slice(0, 2).map((product, index) => (
+                            <div key={index} className="bg-card border rounded-lg p-3">
+                              <div className="flex justify-between items-start mb-1">
+                                <h5 className="font-medium text-sm text-primary">
+                                  {product.name}
+                                </h5>
+                                <div className="flex items-center gap-1">
+                                  <Star className="h-3 w-3 fill-accent-warm text-accent-warm" />
+                                  <span className="text-xs">{product.rating}</span>
+                                </div>
+                              </div>
+                              <div className="flex justify-between items-center text-xs text-muted-foreground">
+                                <span>{product.capacity}</span>
+                                <span className="font-semibold text-primary">{product.price}</span>
                               </div>
                             </div>
-                            <div className="flex justify-between items-center text-xs text-muted-foreground">
-                              <span>{product.capacity}</span>
-                              <span className="font-semibold text-primary">{product.price}</span>
-                            </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
 
-                    <Button variant="outline" className="w-full mt-4">
-                      <Phone className="h-4 w-4" />
-                      Get Quote
-                    </Button>
-                  </CardContent>
-                </Card>
+                      <Button variant="outline" className="w-full mt-4">
+                        <Phone className="h-4 w-4" />
+                        Get Quote
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -302,75 +304,83 @@ const Products = () => {
                   brand: "Daikin Exclusive", 
                   description: "Variable Refrigerant Volume systems for maximum efficiency",
                   image: vrvSystem,
-                  products: ["Multi-zone control", "Energy recovery", "Heat pump technology"]
+                  products: ["Multi-zone control", "Energy recovery", "Heat pump technology"],
+                  link: "/products/vrv-system"
                 },
                 { 
                   title: "Chillers", 
                   brand: "Multi-Brand", 
                   description: "Industrial cooling solutions for large facilities",
                   image: chillerSystem,
-                  products: ["Water-cooled chillers", "Air-cooled systems", "Modular designs"]
+                  products: ["Water-cooled chillers", "Air-cooled systems", "Modular designs"],
+                  link: "/products/chiller-system"
                 },
                 { 
                   title: "Heat Pumps", 
                   brand: "Daikin & Carrier", 
                   description: "Energy-efficient heating and cooling systems",
                   image: heatPump,
-                  products: ["Inverter technology", "All-season comfort", "Eco-friendly refrigerant"]
+                  products: ["Inverter technology", "All-season comfort", "Eco-friendly refrigerant"],
+                  link: "/products/heat-pump"
                 },
                 { 
                   title: "Ductable ACs", 
                   brand: "All Major Brands", 
                   description: "Central air conditioning with concealed installation",
                   image: ductableAc,
-                  products: ["Concealed design", "Uniform cooling", "Centralized control"]
+                  products: ["Concealed design", "Uniform cooling", "Centralized control"],
+                  link: "/products/ductable-ac"
                 },
                 { 
                   title: "Cold Rooms & Storage", 
                   brand: "Daikin, Carrier, Blue Star", 
                   description: "Commercial refrigeration and cold storage solutions",
                   image: coldRoom,
-                  products: ["Walk-in freezers", "Temperature control", "Food grade materials"]
+                  products: ["Walk-in freezers", "Temperature control", "Food grade materials"],
+                  link: "/products/cold-room"
                 },
                 { 
                   title: "Air Handling Units", 
                   brand: "Daikin Exclusive", 
                   description: "AHU systems for large commercial applications",
                   image: ahuSystem,
-                  products: ["High CFM capacity", "Energy recovery", "Modular construction"]
+                  products: ["High CFM capacity", "Energy recovery", "Modular construction"],
+                  link: "/products/ahu-system"
                 }
               ].map((item, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4 bg-primary text-primary-foreground p-2 rounded-lg">
-                      <Wind className="h-5 w-5" />
+                <Link key={index} to={item.link}>
+                  <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden h-full">
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 left-4 bg-primary text-primary-foreground p-2 rounded-lg">
+                        <Wind className="h-5 w-5" />
+                      </div>
                     </div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-lg text-primary">{item.title}</CardTitle>
-                    <Badge variant="outline" className="mx-auto">{item.brand}</Badge>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
-                    <div className="space-y-2 mb-4">
-                      {item.products.map((product, pIndex) => (
-                        <div key={pIndex} className="flex items-center text-xs text-primary">
-                          <div className="w-2 h-2 bg-accent-warm rounded-full mr-2"></div>
-                          {product}
-                        </div>
-                      ))}
-                    </div>
-                    <Button variant="outline" size="sm" className="w-full">
-                      <Phone className="h-4 w-4" />
-                      Get Quote
-                    </Button>
-                  </CardContent>
-                </Card>
+                    <CardHeader>
+                      <CardTitle className="text-lg text-primary">{item.title}</CardTitle>
+                      <Badge variant="outline" className="mx-auto">{item.brand}</Badge>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
+                      <div className="space-y-2 mb-4">
+                        {item.products.map((product, pIndex) => (
+                          <div key={pIndex} className="flex items-center text-xs text-primary">
+                            <div className="w-2 h-2 bg-accent-warm rounded-full mr-2"></div>
+                            {product}
+                          </div>
+                        ))}
+                      </div>
+                      <Button variant="outline" size="sm" className="w-full">
+                        <Phone className="h-4 w-4" />
+                        Get Quote
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
