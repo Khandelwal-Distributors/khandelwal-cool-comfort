@@ -15,6 +15,15 @@ import Amstrad from "./pages/brands/Amstrad";
 import Midea from "./pages/brands/Midea";
 import Godrej from "./pages/brands/Godrej";
 import Cruise from "./pages/brands/Cruise";
+import InverterSplitAC from "./pages/products/InverterSplitAC";
+import WindowAC from "./pages/products/WindowAC";
+import CassetteAC from "./pages/products/CassetteAC";
+import VRVSystem from "./pages/products/VRVSystem";
+import WaterCooler from "./pages/products/WaterCooler";
+import PortableAC from "./pages/products/PortableAC";
+import SolarWaterHeater from "./pages/products/SolarWaterHeater";
+import AlkalineRO from "./pages/products/AlkalineRO";
+import ChillerSystem from "./pages/products/ChillerSystem";
 
 const queryClient = new QueryClient();
 

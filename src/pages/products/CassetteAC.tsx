@@ -1,0 +1,205 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Phone, ArrowLeft, Star, Wind, Building, Eye, Thermometer } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import cassetteAc from "@/assets/cassette-ac.jpg";
+
+const CassetteAC = () => {
+  const products = [
+    { name: "Daikin FCVF50ARV16", capacity: "2 Ton", rating: "5 Star", price: "₹85,000", features: ["360° Air Flow", "Inverter Tech", "Remote Control"] },
+    { name: "Carrier Cassette 42KCC036", capacity: "3 Ton", rating: "3 Star", price: "₹95,000", features: ["4-Way Airflow", "Copper Coil", "Timer Function"] },
+    { name: "Mitsubishi Heavy Cassette", capacity: "2.5 Ton", rating: "4 Star", price: "₹90,000", features: ["Heavy Duty", "PM 2.5 Filter", "Low Noise"] },
+    { name: "Cruise Cassette Pro", capacity: "3 Ton", rating: "3 Star", price: "₹75,000", features: ["Commercial Grade", "Easy Maintenance", "Uniform Cooling"] },
+    { name: "Blue Star Cassette", capacity: "2 Ton", rating: "4 Star", price: "₹82,000", features: ["Indian Make", "Reliable", "Service Support"] },
+    { name: "Voltas Cassette Elite", capacity: "2.5 Ton", rating: "3 Star", price: "₹78,000", features: ["Tata Product", "Energy Efficient", "Durable"] }
+  ];
+
+  const benefits = [
+    { icon: <Eye className="h-6 w-6" />, title: "Invisible Design", description: "Ceiling-mounted for aesthetically pleasing interiors" },
+    { icon: <Wind className="h-6 w-6" />, title: "360° Air Flow", description: "Uniform cooling distribution in all directions" },
+    { icon: <Building className="h-6 w-6" />, title: "Commercial Use", description: "Perfect for offices, shops, restaurants, and halls" },
+    { icon: <Thermometer className="h-6 w-6" />, title: "Large Coverage", description: "Ideal for spacious rooms and commercial spaces" }
+  ];
+
+  const applications = [
+    "Office Spaces", "Retail Stores", "Restaurants", "Hotel Lobbies", 
+    "Conference Rooms", "Showrooms", "Clinics", "Reception Areas"
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Cassette AC Price in Bareilly | Ceiling Mounted ACs | Commercial Installation</title>
+        <meta name="description" content="Buy Cassette ACs in Bareilly, UP. Best prices on Daikin, Carrier, Mitsubishi cassette air conditioners. Perfect for offices, restaurants, commercial spaces. Expert installation." />
+        <meta name="keywords" content="cassette AC price Bareilly, ceiling AC Bareilly, commercial AC Bareilly, office AC installation, Daikin cassette AC, restaurant AC Bareilly UP" />
+        <meta property="og:title" content="Best Cassette AC Dealers in Bareilly | Commercial Air Conditioning" />
+        <meta property="og:description" content="Premium cassette ACs for commercial spaces in Bareilly. 360° airflow, invisible design, expert installation for offices and restaurants." />
+        <link rel="canonical" href="https://yoursite.com/products/cassette-ac" />
+      </Helmet>
+
+      <Header />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-4 mb-6">
+              <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
+                <ArrowLeft className="h-6 w-6" />
+              </Link>
+              <h1 className="text-4xl md:text-5xl font-bold text-white">
+                Cassette Air Conditioners in Bareilly
+              </h1>
+            </div>
+            <p className="text-xl text-white/90 max-w-3xl mb-8">
+              Premium ceiling-mounted cassette ACs for commercial spaces in Bareilly, Uttar Pradesh. 
+              360° airflow, invisible design, perfect for offices, restaurants, and large rooms.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button variant="cta" size="lg">
+                <Phone className="h-5 w-5" />
+                Get Commercial Quote
+              </Button>
+              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
+                Site Survey
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-primary mb-12">
+              Why Choose Cassette Air Conditioners?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="mx-auto bg-primary/10 text-primary p-3 rounded-full w-fit">
+                      {benefit.icon}
+                    </div>
+                    <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{benefit.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Applications Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-4">
+                Perfect Applications for Cassette ACs
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Ideal cooling solutions for various commercial and institutional spaces
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+              {applications.map((app, index) => (
+                <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <Building className="h-8 w-8 text-primary mx-auto mb-2" />
+                  <span className="font-medium">{app}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Product Showcase */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-4">
+                Premium Cassette AC Models in Bareilly
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                High-performance cassette ACs with expert commercial installation
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {products.map((product, index) => (
+                <Card key={index} className="hover:shadow-xl transition-shadow">
+                  <div className="relative">
+                    <img 
+                      src={cassetteAc} 
+                      alt={`${product.name} - Cassette Air Conditioner`}
+                      className="w-full h-48 object-cover rounded-t-lg"
+                    />
+                    <Badge className="absolute top-4 right-4 bg-accent-warm">
+                      {product.rating}
+                    </Badge>
+                  </div>
+                  
+                  <CardHeader>
+                    <CardTitle className="text-lg text-primary">{product.name}</CardTitle>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">{product.capacity}</span>
+                      <span className="text-lg font-bold text-accent-warm">{product.price}</span>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div className="space-y-2 mb-4">
+                      {product.features.map((feature, fIndex) => (
+                        <div key={fIndex} className="flex items-center text-sm">
+                          <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    <Button className="w-full">
+                      <Phone className="h-4 w-4" />
+                      Get Quote
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Local Service Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+              <h2 className="text-3xl font-bold mb-4">
+                Commercial AC Installation in Bareilly
+              </h2>
+              <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Specialized cassette AC installation for commercial spaces across Bareilly district. 
+                False ceiling work, electrical connections, and comprehensive project management.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button variant="secondary" size="lg">
+                  <Phone className="h-5 w-5" />
+                  Call: +91-XXXXX-XXXXX
+                </Button>
+                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
+                  Project Consultation
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default CassetteAC;
