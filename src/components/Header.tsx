@@ -7,15 +7,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center">
               <img 
-                src="/lovable-uploads/253ff299-0035-4525-90a9-5b15b36d4e69.png" 
+                src="/lovable-uploads/1dac8f77-f78d-438f-9443-81448ee971c1.png" 
                 alt="Khandelwal Distributors Logo" 
-                className="w-10 h-10"
+                className="h-12"
               />
-              <h1 className="text-2xl font-bold text-primary">
-                Khandelwal Distributors
-              </h1>
             </div>
           </div>
           
