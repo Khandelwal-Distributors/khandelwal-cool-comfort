@@ -41,9 +41,15 @@ const BrandShowcase = () => {
           {brands.map((brand, index) => (
             <Card 
               key={index} 
-              className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 overflow-hidden ${
+              className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 overflow-hidden cursor-pointer ${
                 brand.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-primary/10' : ''
               }`}
+              onClick={() => {
+                const brandSlug = brand.name.toLowerCase().replace(/\s+/g, '-');
+                if (['daikin', 'mitsubishi-heavy', 'carrier', 'voltas'].includes(brandSlug)) {
+                  window.location.href = `/brands/${brandSlug}`;
+                }
+              }}
             >
               <CardContent className="p-0 relative">
                 {brand.featured && (
