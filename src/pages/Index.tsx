@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import BrandShowcase from "@/components/BrandShowcase";
+import DaikinSolutionPlaza from "@/components/DaikinSolutionPlaza";
 import ProductCategories from "@/components/ProductCategories";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
@@ -17,6 +18,7 @@ const Index = () => {
       <main>
         <Hero />
         <BrandShowcase />
+        <DaikinSolutionPlaza />
         <ProductCategories />
         <Services />
         <EndOfSeasonSale />

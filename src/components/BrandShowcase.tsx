@@ -63,10 +63,13 @@ const BrandShowcase = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
           <Button variant="cta" size="lg">
             <Phone className="h-4 w-4" />
             Get Brand-Specific Quote
+          </Button>
+          <Button variant="outline" size="lg">
+            View All Products
           </Button>
         </div>
       </div>

@@ -135,6 +135,12 @@ const ProductCategories = () => {
               </div>
             ))}
           </div>
+          
+          <div className="text-center mt-8">
+            <Button variant="cta" size="lg">
+              View All Products
+            </Button>
+          </div>
         </div>
       </div>
     </section>
