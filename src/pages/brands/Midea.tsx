@@ -3,73 +3,66 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Star, CheckCircle, Zap, Shield, Award } from "lucide-react";
+import { Phone, Star, CheckCircle, IndianRupee, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import mitsubishiLogo from "@/assets/brands/mitsubishi-logo.jpg";
-import commercialHVAC from "@/assets/commercial-hvac.jpg";
-import floorStandingAC from "@/assets/floor-standing-ac.jpg";
-import chillerSystem from "@/assets/chiller-system.jpg";
+import mideaLogo from "@/assets/brands/midea-logo.jpg";
+import splitAC from "@/assets/split-ac.jpg";
+import cassetteAC from "@/assets/cassette-ac.jpg";
 
-const MitsubishiHeavy = () => {
+const Midea = () => {
   const products = [
     {
-      name: "VRF Systems",
-      description: "Variable Refrigerant Flow systems for commercial applications",
-      image: commercialHVAC,
-      features: ["Robust Construction", "High Cooling Capacity", "Extended Lifespan"]
+      name: "Split AC Systems",
+      description: "Economical split ACs with reliable performance for homes",
+      image: splitAC,
+      features: ["Cost Effective", "Energy Efficient", "Reliable Performance"]
     },
     {
-      name: "Split AC Units",
-      description: "Heavy-duty split ACs for demanding applications",
-      image: "/src/assets/split-ac.jpg",
-      features: ["Industrial Grade", "High Performance", "Reliable Operation"]
-    },
-    {
-      name: "Cassette AC",
-      description: "Commercial cassette units for office and retail spaces",
-      image: "/src/assets/cassette-ac.jpg",
-      features: ["360° Air Distribution", "Commercial Grade", "Easy Maintenance"]
+      name: "Cassette AC Units",
+      description: "Commercial cassette ACs for office and retail spaces",
+      image: cassetteAC,
+      features: ["360° Air Flow", "Commercial Grade", "Easy Maintenance"]
     }
   ];
 
-  const whyChooseMitsubishi = [
+  const whyChooseMidea = [
     {
-      icon: <Award className="h-6 w-6 text-accent-warm" />,
-      title: "Industrial Heritage",
-      description: "Over 140 years of engineering excellence and innovation"
+      icon: <IndianRupee className="h-6 w-6 text-accent-warm" />,
+      title: "Most Economical",
+      description: "Budget-friendly pricing without compromising on quality"
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6 text-primary" />,
+      title: "Global Brand",
+      description: "World's leading appliance manufacturer with proven reliability"
     },
     {
       icon: <Zap className="h-6 w-6 text-primary" />,
-      title: "Heavy Duty Performance",
-      description: "Built for demanding commercial and industrial applications"
-    },
-    {
-      icon: <Shield className="h-6 w-6 text-primary" />,
-      title: "Exceptional Durability",
-      description: "Superior build quality for extended operational life"
+      title: "Smart Features",
+      description: "Modern technology with intelligent cooling solutions"
     },
     {
       icon: <Star className="h-6 w-6 text-accent-warm" />,
-      title: "Advanced Technology",
-      description: "Cutting-edge features for maximum efficiency and control"
+      title: "Trusted Performance",
+      description: "Consistent cooling performance in all weather conditions"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Mitsubishi Heavy AC Dealer Bareilly | Commercial HVAC Systems | Khandelwal Distributors</title>
-        <meta name="description" content="Authorized Mitsubishi Heavy AC dealer in Bareilly, UP. Heavy-duty commercial ACs, chiller systems, floor standing units. Expert installation. Call +91 98765 43210" />
-        <meta name="keywords" content="Mitsubishi Heavy Bareilly, commercial AC Bareilly, heavy duty AC UP, chiller systems Bareilly, industrial AC Bareilly" />
-        <link rel="canonical" href="https://khandelwaldistributors.com/brands/mitsubishi-heavy" />
+        <title>Midea AC Dealer Bareilly | Economical Split & Cassette AC | Khandelwal Distributors</title>
+        <meta name="description" content="Authorized Midea AC dealer in Bareilly, UP. Most economical split & cassette ACs for homes and offices. Budget-friendly cooling solutions. Call +91 98765 43210" />
+        <meta name="keywords" content="Midea AC Bareilly, economical AC Bareilly, budget AC UP, cassette AC Bareilly, affordable cooling Bareilly" />
+        <link rel="canonical" href="https://khandelwaldistributors.com/brands/midea" />
         
         <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Mitsubishi Heavy Industries Air Conditioning",
-          "brand": "Mitsubishi Heavy Industries",
-          "description": "Heavy-duty commercial and industrial AC systems available in Bareilly, Uttar Pradesh",
+          "name": "Midea Air Conditioning Systems",
+          "brand": "Midea",
+          "description": "Economical split and cassette AC systems for homes and offices in Bareilly, Uttar Pradesh",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "INR",
@@ -89,36 +82,36 @@ const MitsubishiHeavy = () => {
               <div className="flex flex-col lg:flex-row items-center gap-12">
                 <div className="lg:w-1/2">
                   <div className="flex items-center gap-4 mb-6">
-                    <img src={mitsubishiLogo} alt="Mitsubishi Heavy Logo" className="h-16" />
+                    <img src={mideaLogo} alt="Midea Logo" className="h-16" />
                     <div>
                       <h1 className="text-4xl font-bold text-foreground">
-                        Mitsubishi Heavy Industries
+                        Midea Air Conditioning
                       </h1>
-                      <p className="text-primary font-semibold">Heavy Duty Commercial Solutions</p>
+                      <p className="text-primary font-semibold">Smart & Economical</p>
                     </div>
                   </div>
                   
                   <p className="text-lg text-muted-foreground mb-8">
-                    Engineered for the most demanding applications. Mitsubishi Heavy delivers 
-                    industrial-grade cooling solutions with unmatched reliability and performance 
-                    in Bareilly and across Uttar Pradesh.
+                    Discover affordable cooling solutions with Midea's economical split and cassette ACs. 
+                    Global quality at local prices, perfect for homes and offices in Bareilly, 
+                    Uttar Pradesh.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button variant="cta" size="lg">
                       <Phone className="h-5 w-5" />
-                      Get Commercial Quote
+                      Get Budget Quote
                     </Button>
                     <Button variant="outline" size="lg">
-                      Technical Specifications
+                      Compare Models
                     </Button>
                   </div>
                 </div>
                 
                 <div className="lg:w-1/2">
                   <img 
-                    src={commercialHVAC} 
-                    alt="Mitsubishi Heavy Commercial HVAC" 
+                    src={splitAC} 
+                    alt="Midea Split AC" 
                     className="w-full rounded-lg shadow-lg"
                   />
                 </div>
@@ -126,15 +119,15 @@ const MitsubishiHeavy = () => {
             </div>
           </section>
 
-          {/* Why Choose Mitsubishi Heavy */}
+          {/* Why Choose Midea */}
           <section className="py-16 bg-background">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-12">
-                Why Choose Mitsubishi Heavy?
+                Why Choose Midea in Bareilly?
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {whyChooseMitsubishi.map((item, index) => (
+                {whyChooseMidea.map((item, index) => (
                   <Card key={index} className="group hover:shadow-[var(--shadow-card)] transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
@@ -157,10 +150,10 @@ const MitsubishiHeavy = () => {
           <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-12">
-                Heavy Duty Commercial Solutions
+                Midea Product Range
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {products.map((product, index) => (
                   <Card key={index} className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1">
                     <CardContent className="p-0">
@@ -194,19 +187,19 @@ const MitsubishiHeavy = () => {
           <section className="py-16 bg-primary text-primary-foreground">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-3xl font-bold mb-4">
-                Need Heavy Duty Cooling Solutions?
+                Need Budget-Friendly Cooling?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Expert consultation for commercial and industrial projects in Bareilly
+                Get the most economical AC solutions in Bareilly
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
-                  Discuss Your Project
+                  Get Affordable Quote
                 </Button>
                 <Button asChild variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
-                  <Link to="/contact">Request Site Survey</Link>
+                  <Link to="/contact">Compare Prices</Link>
                 </Button>
               </div>
             </div>
@@ -219,4 +212,4 @@ const MitsubishiHeavy = () => {
   );
 };
 
-export default MitsubishiHeavy;
+export default Midea;

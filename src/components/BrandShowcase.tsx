@@ -13,14 +13,14 @@ import cruiseLogo from "@/assets/brands/cruise-logo.jpg";
 import voltasLogo from "@/assets/brands/voltas-logo.jpg";
 
 const brands = [
-  { name: "Daikin", specialty: "Premium VRV Systems", featured: true, logo: daikinLogo },
-  { name: "Mitsubishi Heavy", specialty: "Heavy Duty Commercial", logo: mitsubishiLogo },
-  { name: "Carrier", specialty: "Reliable Cooling", logo: carrierLogo },
-  { name: "Voltas", specialty: "India's No.1 AC", logo: voltasLogo },
-  { name: "Amstrad", specialty: "Budget Friendly", logo: amstradLogo },
-  { name: "Midea", specialty: "Energy Efficient", logo: mideaLogo },
-  { name: "Godrej", specialty: "Indian Excellence", logo: godrejLogo },
-  { name: "Cruise", specialty: "Compact Solutions", logo: cruiseLogo },
+  { name: "Daikin", specialty: "Premium VRV Systems", featured: true, logo: daikinLogo, link: "/brands/daikin" },
+  { name: "Mitsubishi Heavy", specialty: "Heavy Duty Commercial", logo: mitsubishiLogo, link: "/brands/mitsubishi-heavy" },
+  { name: "Carrier", specialty: "Reliable Cooling", logo: carrierLogo, link: "/brands/carrier" },
+  { name: "Voltas", specialty: "India's No.1 AC", logo: voltasLogo, link: "/brands/voltas" },
+  { name: "Amstrad", specialty: "Quality + Competitive Price", logo: amstradLogo, link: "/brands/amstrad" },
+  { name: "Midea", specialty: "Economical & Smart", logo: mideaLogo, link: "/brands/midea" },
+  { name: "Godrej", specialty: "India's Most Economical", logo: godrejLogo, link: "/brands/godrej" },
+  { name: "Cruise", specialty: "Portable & Heavy Duty", logo: cruiseLogo, link: "/brands/cruise" },
 ];
 
 const BrandShowcase = () => {
@@ -45,9 +45,8 @@ const BrandShowcase = () => {
                 brand.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-primary/10' : ''
               }`}
               onClick={() => {
-                const brandSlug = brand.name.toLowerCase().replace(/\s+/g, '-');
-                if (['daikin', 'mitsubishi-heavy', 'carrier', 'voltas'].includes(brandSlug)) {
-                  window.location.href = `/brands/${brandSlug}`;
+                if (brand.link) {
+                  window.location.href = brand.link;
                 }
               }}
             >

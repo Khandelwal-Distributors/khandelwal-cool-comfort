@@ -29,6 +29,24 @@ const Daikin = () => {
       description: "Ceiling-mounted units for commercial applications",
       image: cassetteAC,
       features: ["360° Air Distribution", "Compact Design", "Easy Maintenance"]
+    },
+    {
+      name: "Chiller Systems",
+      description: "Centralized cooling for large buildings and complexes",
+      image: "/src/assets/chiller-system.jpg",
+      features: ["High Efficiency", "Centralized Control", "Scalable Capacity"]
+    },
+    {
+      name: "Heat Pump Systems",
+      description: "Year-round comfort with heating and cooling solutions",
+      image: "/src/assets/heat-pump.jpg", 
+      features: ["Dual Function", "Energy Saving", "All Weather Operation"]
+    },
+    {
+      name: "HRV Systems",
+      description: "Heat Recovery Ventilation for fresh air and energy efficiency",
+      image: "/src/assets/ventilation-hrv.jpg",
+      features: ["Fresh Air Supply", "Heat Recovery", "Energy Efficient"]
     }
   ];
 
@@ -163,7 +181,7 @@ const Daikin = () => {
                 Daikin Product Range
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {products.map((product, index) => (
                   <Card key={index} className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1">
                     <CardContent className="p-0">

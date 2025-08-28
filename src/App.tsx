@@ -11,6 +11,10 @@ import Daikin from "./pages/brands/Daikin";
 import MitsubishiHeavy from "./pages/brands/MitsubishiHeavy";
 import Carrier from "./pages/brands/Carrier";
 import Voltas from "./pages/brands/Voltas";
+import Amstrad from "./pages/brands/Amstrad";
+import Midea from "./pages/brands/Midea";
+import Godrej from "./pages/brands/Godrej";
+import Cruise from "./pages/brands/Cruise";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,10 @@ const App = () => (
             <Route path="/brands/mitsubishi-heavy" element={<MitsubishiHeavy />} />
             <Route path="/brands/carrier" element={<Carrier />} />
             <Route path="/brands/voltas" element={<Voltas />} />
+            <Route path="/brands/amstrad" element={<Amstrad />} />
+            <Route path="/brands/midea" element={<Midea />} />
+            <Route path="/brands/godrej" element={<Godrej />} />
+            <Route path="/brands/cruise" element={<Cruise />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

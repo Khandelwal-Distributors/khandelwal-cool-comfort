@@ -3,73 +3,73 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Star, CheckCircle, Zap, Shield, Award } from "lucide-react";
+import { Phone, Star, CheckCircle, Truck, Zap, Shield, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
-import mitsubishiLogo from "@/assets/brands/mitsubishi-logo.jpg";
-import commercialHVAC from "@/assets/commercial-hvac.jpg";
+import cruiseLogo from "@/assets/brands/cruise-logo.jpg";
+import portableAC from "@/assets/portable-ac.jpg";
+import splitAC from "@/assets/split-ac.jpg";
 import floorStandingAC from "@/assets/floor-standing-ac.jpg";
-import chillerSystem from "@/assets/chiller-system.jpg";
 
-const MitsubishiHeavy = () => {
+const Cruise = () => {
   const products = [
     {
-      name: "VRF Systems",
-      description: "Variable Refrigerant Flow systems for commercial applications",
-      image: commercialHVAC,
-      features: ["Robust Construction", "High Cooling Capacity", "Extended Lifespan"]
+      name: "Portable AC Units",
+      description: "Mobile cooling solutions for flexibility and convenience",
+      image: portableAC,
+      features: ["Easy Mobility", "Plug & Play", "No Installation Required"]
     },
     {
-      name: "Split AC Units",
-      description: "Heavy-duty split ACs for demanding applications",
-      image: "/src/assets/split-ac.jpg",
-      features: ["Industrial Grade", "High Performance", "Reliable Operation"]
+      name: "Heavy Duty Split AC",
+      description: "Robust split ACs for demanding residential applications",
+      image: splitAC,
+      features: ["Heavy Duty Build", "Extended Life", "High Performance"]
     },
     {
-      name: "Cassette AC",
-      description: "Commercial cassette units for office and retail spaces",
-      image: "/src/assets/cassette-ac.jpg",
-      features: ["360° Air Distribution", "Commercial Grade", "Easy Maintenance"]
+      name: "Floor Standing AC",
+      description: "Powerful floor-mounted units for large spaces",
+      image: floorStandingAC,
+      features: ["High Capacity", "Commercial Grade", "Reliable Operation"]
     }
   ];
 
-  const whyChooseMitsubishi = [
+  const whyChooseCruise = [
     {
-      icon: <Award className="h-6 w-6 text-accent-warm" />,
-      title: "Industrial Heritage",
-      description: "Over 140 years of engineering excellence and innovation"
+      icon: <Truck className="h-6 w-6 text-accent-warm" />,
+      title: "Portable Solutions",
+      description: "Innovative portable ACs for maximum flexibility and convenience"
     },
     {
       icon: <Zap className="h-6 w-6 text-primary" />,
       title: "Heavy Duty Performance",
-      description: "Built for demanding commercial and industrial applications"
+      description: "Built tough for continuous operation and demanding conditions"
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
-      title: "Exceptional Durability",
-      description: "Superior build quality for extended operational life"
+      title: "Reliable Build Quality",
+      description: "Robust construction ensuring long-lasting performance"
     },
     {
-      icon: <Star className="h-6 w-6 text-accent-warm" />,
-      title: "Advanced Technology",
-      description: "Cutting-edge features for maximum efficiency and control"
+      icon: <Settings className="h-6 w-6 text-accent-warm" />,
+      title: "Versatile Applications",
+      description: "Perfect for homes, offices, and temporary cooling needs"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Mitsubishi Heavy AC Dealer Bareilly | Commercial HVAC Systems | Khandelwal Distributors</title>
-        <meta name="description" content="Authorized Mitsubishi Heavy AC dealer in Bareilly, UP. Heavy-duty commercial ACs, chiller systems, floor standing units. Expert installation. Call +91 98765 43210" />
-        <meta name="keywords" content="Mitsubishi Heavy Bareilly, commercial AC Bareilly, heavy duty AC UP, chiller systems Bareilly, industrial AC Bareilly" />
-        <link rel="canonical" href="https://khandelwaldistributors.com/brands/mitsubishi-heavy" />
+        <title>Cruise AC Dealer Bareilly | Portable & Heavy Duty ACs | Khandelwal Distributors</title>
+        <meta name="description" content="Authorized Cruise AC dealer in Bareilly, UP. Portable ACs, heavy duty split & floor standing units. Flexible cooling solutions. Call +91 98765 43210" />
+        <meta name="keywords" content="Cruise AC Bareilly, portable AC Bareilly, heavy duty AC UP, floor standing AC Bareilly, mobile cooling Bareilly" />
+        <link rel="canonical" href="https://khandelwaldistributors.com/brands/cruise" />
         
         <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Mitsubishi Heavy Industries Air Conditioning",
-          "brand": "Mitsubishi Heavy Industries",
-          "description": "Heavy-duty commercial and industrial AC systems available in Bareilly, Uttar Pradesh",
+          "name": "Cruise Air Conditioning Systems",
+          "brand": "Cruise",
+          "description": "Portable, heavy duty split and floor standing AC systems available in Bareilly, Uttar Pradesh",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "INR",
@@ -89,36 +89,36 @@ const MitsubishiHeavy = () => {
               <div className="flex flex-col lg:flex-row items-center gap-12">
                 <div className="lg:w-1/2">
                   <div className="flex items-center gap-4 mb-6">
-                    <img src={mitsubishiLogo} alt="Mitsubishi Heavy Logo" className="h-16" />
+                    <img src={cruiseLogo} alt="Cruise Logo" className="h-16" />
                     <div>
                       <h1 className="text-4xl font-bold text-foreground">
-                        Mitsubishi Heavy Industries
+                        Cruise Air Conditioning
                       </h1>
-                      <p className="text-primary font-semibold">Heavy Duty Commercial Solutions</p>
+                      <p className="text-primary font-semibold">Portable & Heavy Duty Solutions</p>
                     </div>
                   </div>
                   
                   <p className="text-lg text-muted-foreground mb-8">
-                    Engineered for the most demanding applications. Mitsubishi Heavy delivers 
-                    industrial-grade cooling solutions with unmatched reliability and performance 
+                    Discover versatile cooling with Cruise's innovative portable ACs and heavy-duty 
+                    split and floor standing units. Perfect for flexible and demanding applications 
                     in Bareilly and across Uttar Pradesh.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button variant="cta" size="lg">
                       <Phone className="h-5 w-5" />
-                      Get Commercial Quote
+                      Get Flexible Quote
                     </Button>
                     <Button variant="outline" size="lg">
-                      Technical Specifications
+                      Explore Models
                     </Button>
                   </div>
                 </div>
                 
                 <div className="lg:w-1/2">
                   <img 
-                    src={commercialHVAC} 
-                    alt="Mitsubishi Heavy Commercial HVAC" 
+                    src={portableAC} 
+                    alt="Cruise Portable AC" 
                     className="w-full rounded-lg shadow-lg"
                   />
                 </div>
@@ -126,15 +126,15 @@ const MitsubishiHeavy = () => {
             </div>
           </section>
 
-          {/* Why Choose Mitsubishi Heavy */}
+          {/* Why Choose Cruise */}
           <section className="py-16 bg-background">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-12">
-                Why Choose Mitsubishi Heavy?
+                Why Choose Cruise in Bareilly?
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {whyChooseMitsubishi.map((item, index) => (
+                {whyChooseCruise.map((item, index) => (
                   <Card key={index} className="group hover:shadow-[var(--shadow-card)] transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
@@ -157,7 +157,7 @@ const MitsubishiHeavy = () => {
           <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-12">
-                Heavy Duty Commercial Solutions
+                Cruise Product Range
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -194,19 +194,19 @@ const MitsubishiHeavy = () => {
           <section className="py-16 bg-primary text-primary-foreground">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-3xl font-bold mb-4">
-                Need Heavy Duty Cooling Solutions?
+                Need Flexible Cooling Solutions?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Expert consultation for commercial and industrial projects in Bareilly
+                Get portable and heavy-duty AC options in Bareilly
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
-                  Discuss Your Project
+                  Discuss Your Needs
                 </Button>
                 <Button asChild variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
-                  <Link to="/contact">Request Site Survey</Link>
+                  <Link to="/contact">Get Custom Solution</Link>
                 </Button>
               </div>
             </div>
@@ -219,4 +219,4 @@ const MitsubishiHeavy = () => {
   );
 };
 
-export default MitsubishiHeavy;
+export default Cruise;
