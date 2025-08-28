@@ -24,6 +24,11 @@ import PortableAC from "./pages/products/PortableAC";
 import SolarWaterHeater from "./pages/products/SolarWaterHeater";
 import AlkalineRO from "./pages/products/AlkalineRO";
 import ChillerSystem from "./pages/products/ChillerSystem";
+import NonInverterSplitAC from "./pages/products/NonInverterSplitAC";
+import FloorStandingAC from "./pages/products/FloorStandingAC";
+import HeatPump from "./pages/products/HeatPump";
+import AirPurifier from "./pages/products/AirPurifier";
+import VentilationHRV from "./pages/products/VentilationHRV";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +50,20 @@ const App = () => (
             <Route path="/brands/midea" element={<Midea />} />
             <Route path="/brands/godrej" element={<Godrej />} />
             <Route path="/brands/cruise" element={<Cruise />} />
+            <Route path="/products/inverter-split-ac" element={<InverterSplitAC />} />
+            <Route path="/products/window-ac" element={<WindowAC />} />
+            <Route path="/products/cassette-ac" element={<CassetteAC />} />
+            <Route path="/products/vrv-system" element={<VRVSystem />} />
+            <Route path="/products/water-cooler" element={<WaterCooler />} />
+            <Route path="/products/portable-ac" element={<PortableAC />} />
+            <Route path="/products/solar-water-heater" element={<SolarWaterHeater />} />
+            <Route path="/products/alkaline-ro" element={<AlkalineRO />} />
+            <Route path="/products/chiller-system" element={<ChillerSystem />} />
+            <Route path="/products/non-inverter-split-ac" element={<NonInverterSplitAC />} />
+            <Route path="/products/floor-standing-ac" element={<FloorStandingAC />} />
+            <Route path="/products/heat-pump" element={<HeatPump />} />
+            <Route path="/products/air-purifier" element={<AirPurifier />} />
+            <Route path="/products/ventilation-hrv" element={<VentilationHRV />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
