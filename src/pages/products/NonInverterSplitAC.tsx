@@ -48,8 +48,9 @@ const NonInverterSplitAC = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16" style={{backgroundImage: "url('/src/assets/split-ac.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
                 <ArrowLeft className="h-6 w-6" />
@@ -65,10 +66,7 @@ const NonInverterSplitAC = () => {
             <div className="flex flex-wrap gap-4">
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
-                Get Budget Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Compare Models
+                Get Best Price Quote
               </Button>
             </div>
           </div>
@@ -255,7 +253,7 @@ const NonInverterSplitAC = () => {
         {/* Local Service Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
                 Non-Inverter AC Installation & Service in Bareilly
               </h2>
@@ -267,9 +265,6 @@ const NonInverterSplitAC = () => {
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
                   Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Schedule Installation
                 </Button>
               </div>
             </div>

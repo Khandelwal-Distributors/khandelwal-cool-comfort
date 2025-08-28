@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, ArrowLeft, Star, Sun, Leaf, TrendingDown, Shield } from "lucide-react";
+import { Phone, ArrowLeft, Star, Sun, Leaf, TrendingDown, Shield, Home, Building, Hotel, School, Hospital, Factory } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import solarWaterHeater from "@/assets/solar-water-heater.jpg";
@@ -39,8 +39,14 @@ const SolarWaterHeater = () => {
   ];
 
   const applications = [
-    "Residential Homes", "Hotels & Resorts", "Hospitals", "Schools & Colleges",
-    "Hostels", "Gymnasiums", "Swimming Pools", "Industrial Processes"
+    { name: "Residential Homes", icon: <Home className="h-6 w-6" /> }, 
+    { name: "Hotels & Resorts", icon: <Hotel className="h-6 w-6" /> }, 
+    { name: "Hospitals", icon: <Hospital className="h-6 w-6" /> }, 
+    { name: "Schools & Colleges", icon: <School className="h-6 w-6" /> },
+    { name: "Hostels", icon: <Building className="h-6 w-6" /> }, 
+    { name: "Gymnasiums", icon: <Factory className="h-6 w-6" /> }, 
+    { name: "Swimming Pools", icon: <Building className="h-6 w-6" /> }, 
+    { name: "Industrial Processes", icon: <Factory className="h-6 w-6" /> }
   ];
 
   return (
@@ -58,8 +64,9 @@ const SolarWaterHeater = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16" style={{backgroundImage: "url('/src/assets/solar-water-heater.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
                 <ArrowLeft className="h-6 w-6" />
@@ -75,10 +82,7 @@ const SolarWaterHeater = () => {
             <div className="flex flex-wrap gap-4">
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
-                Get Solar Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Calculate Savings
+                Get Best Price Quote
               </Button>
             </div>
           </div>
@@ -149,8 +153,10 @@ const SolarWaterHeater = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {applications.map((app, index) => (
                 <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <Sun className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <span className="font-medium">{app}</span>
+                  <div className="text-primary mx-auto mb-2">
+                    {app.icon}
+                  </div>
+                  <span className="font-medium">{app.name}</span>
                 </div>
               ))}
             </div>
@@ -246,7 +252,7 @@ const SolarWaterHeater = () => {
         {/* Local Service Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
                 Solar Water Heater Installation in Bareilly
               </h2>
@@ -258,9 +264,6 @@ const SolarWaterHeater = () => {
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
                   Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Free Roof Survey
                 </Button>
               </div>
             </div>
