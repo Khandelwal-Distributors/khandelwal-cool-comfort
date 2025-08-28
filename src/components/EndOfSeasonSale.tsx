@@ -80,10 +80,11 @@ const EndOfSeasonSale = () => {
                   <div className="flex justify-between items-start mb-2">
                     <h5 className="font-semibold">AUX 1.6 Ton Hot & Cold</h5>
                     <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />4⭐
+                      <Star className="h-3 w-3" />
+                      4 Star
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">Cooling + Heating Mode • 6 Units Available</p>
+                  <p className="text-sm text-muted-foreground mb-2">6 Units Available</p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm line-through text-muted-foreground">₹42,000</span>
                     <span className="font-bold text-xl text-accent-warm">₹30,000/-</span>
@@ -94,10 +95,10 @@ const EndOfSeasonSale = () => {
                   <div className="flex justify-between items-start mb-2">
                     <h5 className="font-semibold">Sharp 1 Ton</h5>
                     <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />4⭐
+                      <Star className="h-3 w-3" />
+                      4 Star
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">Cooling Only</p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm line-through text-muted-foreground">₹38,000</span>
                     <span className="font-bold text-xl text-accent-warm">₹28,000/-</span>
@@ -108,32 +109,51 @@ const EndOfSeasonSale = () => {
                   <div className="flex justify-between items-start mb-2">
                     <h5 className="font-semibold">Lloyd 1.5 Ton Inverter</h5>
                     <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                      <Star className="h-3 w-3" />3⭐
+                      <Star className="h-3 w-3" />
+                      3 Star
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">Inverter Technology • 16 Units Available</p>
+                  <p className="text-sm text-muted-foreground mb-2">16 Units Available</p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm line-through text-muted-foreground">₹42,000</span>
                     <span className="font-bold text-xl text-accent-warm">₹31,000/-</span>
                   </div>
                 </div>
                 
-                <div className="bg-muted rounded-lg p-3">
-                  <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div className="text-center">
-                      <p className="font-semibold">AUX 2T Inverter</p>
-                      <p className="text-accent-warm font-bold">₹33,000/-</p>
+                <div className="bg-muted rounded-lg p-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <h5 className="font-semibold">AUX 2T Inverter</h5>
+                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
+                      <Star className="h-3 w-3" />
+                      3 Star
                     </div>
-                    <div className="text-center">
-                      <p className="font-semibold">WW 2T Inverter</p>
-                      <p className="text-accent-warm font-bold">₹35,000/-</p>
-                    </div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-xl text-accent-warm">₹33,000/-</span>
                   </div>
                 </div>
                 
-                <div className="bg-muted rounded-lg p-3 text-center">
-                  <p className="font-semibold">Panasonic 2 Ton Inverter</p>
-                  <p className="text-accent-warm font-bold text-lg">₹35,500/-</p>
+                <div className="bg-muted rounded-lg p-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <h5 className="font-semibold">WW 2T Inverter</h5>
+                    <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
+                      <Star className="h-3 w-3" />
+                      3 Star
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-2">2 Units Available</p>
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-xl text-accent-warm">₹35,000/-</span>
+                  </div>
+                </div>
+                
+                <div className="bg-muted rounded-lg p-4 text-center">
+                  <div className="flex justify-between items-start mb-2">
+                    <h5 className="font-semibold">Panasonic 2 Ton Inverter</h5>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-xl text-accent-warm">₹35,500/-</span>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -150,7 +170,7 @@ const EndOfSeasonSale = () => {
             <CardContent>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 bg-muted rounded-lg p-3">
-                  <div className="bg-accent-warm text-accent-warm-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">30%</div>
+                  <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">30%</div>
                   <span className="font-medium">Up to 30% Off MRP</span>
                 </div>
                 <div className="flex items-center gap-3 bg-muted rounded-lg p-3">
@@ -172,7 +192,7 @@ const EndOfSeasonSale = () => {
                   <span className="font-medium">0% EMI Available</span>
                 </div>
                 <div className="flex items-center gap-3 bg-muted rounded-lg p-3">
-                  <div className="bg-accent-warm text-accent-warm-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">⚡</div>
+                  <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">⚡</div>
                   <span className="font-medium">Exchange Offers Available</span>
                 </div>
                 <div className="flex items-center gap-3 bg-muted rounded-lg p-3">
@@ -182,18 +202,6 @@ const EndOfSeasonSale = () => {
                   <span className="font-medium">ACs on Rent</span>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-        
-        <div className="text-center">
-          <Card className="inline-block">
-            <CardContent className="p-6">
-              <p className="font-semibold mb-2 flex items-center justify-center gap-2">
-                <Zap className="h-5 w-5 text-accent-warm" />
-                Limited Time Offer - Don't Miss Out!
-              </p>
-              <p className="text-sm text-muted-foreground">Call now for best deals and immediate delivery</p>
             </CardContent>
           </Card>
         </div>
