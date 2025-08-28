@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Menu } from "lucide-react";
+import { Phone, Menu, MessageCircle } from "lucide-react";
 
 const Header = () => {
   return (
@@ -17,9 +17,6 @@ const Header = () => {
                 Khandelwal Distributors
               </h1>
             </div>
-            <p className="text-sm text-muted-foreground hidden md:block">
-              HVAC • Air Conditioning • Commercial Projects
-            </p>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -30,6 +27,15 @@ const Header = () => {
                 +91 98765 43210
               </a>
             </div>
+            
+            <a 
+              href="https://wa.me/919876543210" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-green-600 hover:text-green-700 transition-colors"
+            >
+              <MessageCircle className="h-6 w-6" />
+            </a>
             
             <Button variant="cta" size="sm" className="hidden sm:flex">
               <Phone className="h-4 w-4" />
