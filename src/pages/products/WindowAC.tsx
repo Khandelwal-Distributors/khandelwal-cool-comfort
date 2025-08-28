@@ -40,7 +40,7 @@ const WindowAC = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
+        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16" style={{backgroundImage: "url('/src/assets/window-ac.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
@@ -58,9 +58,6 @@ const WindowAC = () => {
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
                 Get Best Price Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Free Site Visit
               </Button>
             </div>
           </div>
@@ -147,7 +144,7 @@ const WindowAC = () => {
         {/* Local Service Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
                 Window AC Installation & Service in Bareilly
               </h2>
@@ -159,9 +156,6 @@ const WindowAC = () => {
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
                   Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Book Installation
                 </Button>
               </div>
             </div>

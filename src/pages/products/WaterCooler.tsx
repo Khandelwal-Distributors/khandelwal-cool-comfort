@@ -3,43 +3,71 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, ArrowLeft, Star, Droplets, Thermometer, Filter, Heart } from "lucide-react";
+import { Phone, ArrowLeft, Star, Droplets, Thermometer, Filter, Shield, Building, Hotel, School, Hospital, Factory, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import waterCooler from "@/assets/water-cooler.jpg";
 
 const WaterCooler = () => {
   const products = [
-    { name: "Usha Aqua King", capacity: "20L", type: "Storage", price: "₹12,000", features: ["Stainless Steel", "Hot & Cold", "Energy Efficient"] },
-    { name: "Voltas Mini Magic Pure", capacity: "Hot & Cold", type: "Dispenser", price: "₹8,000", features: ["RO Purification", "Compact Design", "Child Lock"] },
-    { name: "Usha Premium Cooler", capacity: "40L", type: "Industrial", price: "₹15,000", features: ["Large Capacity", "SS Body", "Fast Cooling"] },
-    { name: "Blue Star Water Cooler", capacity: "60L", type: "Commercial", price: "₹18,000", features: ["Heavy Duty", "Food Grade", "Auto Cut-Off"] },
-    { name: "Voltas Water Dispenser", capacity: "Hot/Cold/Normal", type: "Dispenser", price: "₹6,500", features: ["3 Temperature", "LED Display", "Bottle Storage"] },
-    { name: "Usha Cooler Deluxe", capacity: "80L", type: "Industrial", price: "₹22,000", features: ["High Capacity", "Rust Proof", "Energy Star"] }
+    { name: "Blue Star Water Cooler 40L", capacity: "40 Litres", type: "Storage Cooler", price: "₹18,000", features: ["Stainless Steel Body", "Energy Efficient", "Auto Cut-off"] },
+    { name: "Voltas Water Dispenser Hot/Cold", capacity: "20 Litres", type: "Dispenser", price: "₹22,000", features: ["Hot & Cold Water", "Child Safety Lock", "LED Indicators"] },
+    { name: "Usha Water Cooler 80L", capacity: "80 Litres", type: "Storage Cooler", price: "₹25,000", features: ["High Capacity", "Rust Proof", "Easy Maintenance"] },
+    { name: "Kent RO Water Cooler", capacity: "25 Litres", type: "RO Cooler", price: "₹35,000", features: ["Built-in RO", "UV Purification", "TDS Controller"] },
+    { name: "Godrej Water Dispenser", capacity: "15 Litres", type: "Dispenser", price: "₹16,000", features: ["Compact Design", "Energy Star", "Easy Installation"] },
+    { name: "Bluestar Stainless Steel Cooler", capacity: "60 Litres", type: "Storage Cooler", price: "₹28,000", features: ["304 Grade Steel", "Heavy Duty", "Commercial Grade"] }
   ];
 
   const benefits = [
-    { icon: <Droplets className="h-6 w-6" />, title: "Pure Water", description: "Clean, safe drinking water for homes and offices" },
-    { icon: <Thermometer className="h-6 w-6" />, title: "Temperature Control", description: "Hot, cold, and normal water options available" },
-    { icon: <Filter className="h-6 w-6" />, title: "Advanced Filtration", description: "RO, UV, and carbon filtration systems" },
-    { icon: <Heart className="h-6 w-6" />, title: "Health Benefits", description: "Hygienic water storage and dispensing" }
+    { icon: <Droplets className="h-6 w-6" />, title: "Pure Water", description: "Clean, cool drinking water available 24/7" },
+    { icon: <Thermometer className="h-6 w-6" />, title: "Temperature Control", description: "Consistent cooling with optimal temperature maintenance" },
+    { icon: <Filter className="h-6 w-6" />, title: "Advanced Filtration", description: "Multi-stage filtration for safe drinking water" },
+    { icon: <Shield className="h-6 w-6" />, title: "Hygienic Design", description: "Stainless steel construction prevents contamination" }
   ];
 
-  const types = [
-    { title: "Storage Water Coolers", description: "Traditional coolers for continuous cold water supply", applications: ["Offices", "Schools", "Factories"] },
-    { title: "Water Dispensers", description: "Compact units with hot, cold, and normal water", applications: ["Homes", "Small Offices", "Clinics"] },
-    { title: "Industrial Coolers", description: "High-capacity coolers for large establishments", applications: ["Hospitals", "Hotels", "Institutions"] },
-    { title: "RO Water Coolers", description: "Integrated purification with cooling systems", applications: ["Premium Offices", "Healthcare", "Schools"] }
+  const coolerTypes = [
+    { 
+      title: "Storage Water Coolers", 
+      description: "High-capacity cooling with large storage tanks",
+      features: ["20L to 100L capacity", "Stainless steel body", "Energy efficient compressor"],
+      applications: ["Offices", "Schools", "Factories"],
+      priceRange: "₹15,000 - ₹35,000"
+    },
+    { 
+      title: "Water Dispensers", 
+      description: "Compact units for instant hot and cold water",
+      features: ["Hot/Cold/Normal water", "Bottle loading", "Child safety features"],
+      applications: ["Homes", "Small Offices", "Clinics"],
+      priceRange: "₹12,000 - ₹25,000"
+    },
+    { 
+      title: "RO Water Coolers", 
+      description: "Integrated purification with cooling technology",
+      features: ["Built-in RO+UV", "TDS control", "Multi-stage purification"],
+      applications: ["Premium Offices", "Hospitals", "Hotels"],
+      priceRange: "₹25,000 - ₹50,000"
+    }
+  ];
+
+  const applications = [
+    { name: "Corporate Offices", icon: <Building className="h-6 w-6" /> }, 
+    { name: "Schools & Colleges", icon: <School className="h-6 w-6" /> }, 
+    { name: "Hospitals & Clinics", icon: <Hospital className="h-6 w-6" /> }, 
+    { name: "Hotels & Restaurants", icon: <Hotel className="h-6 w-6" /> },
+    { name: "Manufacturing Units", icon: <Factory className="h-6 w-6" /> }, 
+    { name: "Residential Societies", icon: <Home className="h-6 w-6" /> }, 
+    { name: "Gym & Fitness Centers", icon: <Building className="h-6 w-6" /> }, 
+    { name: "Shopping Complexes", icon: <Building className="h-6 w-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Water Cooler Price in Bareilly | RO Water Dispensers | Best Cooling Solutions</title>
-        <meta name="description" content="Buy Water Coolers in Bareilly, UP. Best prices on Usha, Voltas, Blue Star water coolers & dispensers. Hot/Cold water solutions for offices, homes. Free installation." />
-        <meta name="keywords" content="water cooler price Bareilly, water dispenser Bareilly, RO water cooler UP, office water cooler, Usha water cooler, Voltas dispenser Bareilly" />
-        <meta property="og:title" content="Best Water Cooler Dealers in Bareilly | Pure Water Solutions" />
-        <meta property="og:description" content="Premium water cooling solutions in Bareilly. Storage coolers, dispensers, RO systems with professional installation and service." />
+        <title>Water Cooler Price in Bareilly | Water Dispenser | RO Water Cooler | Best Brands</title>
+        <meta name="description" content="Buy Water Coolers in Bareilly, UP. Best prices on Blue Star, Voltas, Usha water coolers & dispensers. Storage coolers, RO coolers for offices, schools, hospitals. Professional installation." />
+        <meta name="keywords" content="water cooler price Bareilly, water dispenser UP, RO water cooler Bareilly, Blue Star cooler, office water cooler, school water cooler Bareilly" />
+        <meta property="og:title" content="Best Water Cooler Dealers in Bareilly | Premium Cooling Solutions" />
+        <meta property="og:description" content="Premium water cooling and dispensing solutions for offices, schools, and commercial spaces in Bareilly. Pure, cool water 24/7." />
         <link rel="canonical" href="https://yoursite.com/products/water-cooler" />
       </Helmet>
 
@@ -47,7 +75,7 @@ const WaterCooler = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
+        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16" style={{backgroundImage: `url(${waterCooler})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
@@ -65,9 +93,6 @@ const WaterCooler = () => {
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
                 Get Best Price Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Free Demo
               </Button>
             </div>
           </div>
@@ -105,29 +130,49 @@ const WaterCooler = () => {
                 Types of Water Cooling Solutions
               </h2>
               <p className="text-xl text-muted-foreground">
-                Choose the perfect water cooler based on your needs and space requirements
+                Choose the right water cooling technology for your needs
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {types.map((type, index) => (
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              {coolerTypes.map((type, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle className="text-lg text-primary">{type.title}</CardTitle>
-                    <CardDescription>{type.description}</CardDescription>
+                    <CardTitle className="text-xl text-primary">{type.title}</CardTitle>
+                    <Badge variant="outline" className="w-fit">{type.priceRange}</Badge>
+                    <CardDescription className="text-base">{type.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <h4 className="font-semibold mb-2 text-sm">Best For:</h4>
-                    <div className="space-y-1">
-                      {type.applications.map((app, appIndex) => (
-                        <div key={appIndex} className="flex items-center text-sm text-muted-foreground">
+                    <h4 className="font-semibold mb-3">Key Features:</h4>
+                    <div className="space-y-2 mb-4">
+                      {type.features.map((feature, fIndex) => (
+                        <div key={fIndex} className="flex items-center text-sm">
                           <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                          {app}
+                          {feature}
                         </div>
                       ))}
                     </div>
+                    <h4 className="font-semibold mb-2">Best For:</h4>
+                    <div className="text-sm text-muted-foreground">
+                      {type.applications.join(", ")}
+                    </div>
                   </CardContent>
                 </Card>
+              ))}
+            </div>
+
+            {/* Applications */}
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-primary mb-6">Water Cooler Applications</h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {applications.map((app, index) => (
+                <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                  <div className="text-primary mx-auto mb-2">
+                    {app.icon}
+                  </div>
+                  <span className="font-medium">{app.name}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -138,10 +183,10 @@ const WaterCooler = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-primary mb-4">
-                Best Water Cooler Models in Bareilly
+                Premium Water Cooler Models in Bareilly
               </h2>
               <p className="text-xl text-muted-foreground">
-                Quality water cooling solutions with professional installation and service support
+                High-performance water cooling systems with advanced filtration and temperature control
               </p>
             </div>
 
@@ -155,14 +200,17 @@ const WaterCooler = () => {
                       className="w-full h-48 object-cover rounded-t-lg"
                     />
                     <Badge className="absolute top-4 right-4 bg-accent-warm">
-                      {product.type}
+                      {product.capacity}
                     </Badge>
+                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-2 py-1 rounded text-xs">
+                      {product.type}
+                    </div>
                   </div>
                   
                   <CardHeader>
                     <CardTitle className="text-lg text-primary">{product.name}</CardTitle>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">{product.capacity}</span>
+                      <span className="text-sm text-muted-foreground">{product.type}</span>
                       <span className="text-lg font-bold text-accent-warm">{product.price}</span>
                     </div>
                   </CardHeader>
@@ -190,7 +238,7 @@ const WaterCooler = () => {
         {/* Local Service Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
                 Water Cooler Installation & Service in Bareilly
               </h2>
@@ -202,9 +250,6 @@ const WaterCooler = () => {
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
                   Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Book Service
                 </Button>
               </div>
             </div>

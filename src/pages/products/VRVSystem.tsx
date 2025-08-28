@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, ArrowLeft, Star, Building2, Cpu, Zap, Settings } from "lucide-react";
+import { Phone, ArrowLeft, Star, Building2, Cpu, Zap, Settings, Building, Hotel, Hospital, ShoppingBag, School, Factory } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import vrvSystem from "@/assets/vrv-system.jpg";
@@ -26,8 +26,14 @@ const VRVSystem = () => {
   ];
 
   const applications = [
-    "Corporate Offices", "Hotels & Resorts", "Hospitals & Healthcare", "Shopping Malls",
-    "Educational Institutions", "Data Centers", "Manufacturing Facilities", "Mixed-Use Buildings"
+    { name: "Corporate Offices", icon: <Building className="h-6 w-6" /> }, 
+    { name: "Hotels & Resorts", icon: <Hotel className="h-6 w-6" /> }, 
+    { name: "Hospitals & Healthcare", icon: <Hospital className="h-6 w-6" /> }, 
+    { name: "Shopping Malls", icon: <ShoppingBag className="h-6 w-6" /> },
+    { name: "Educational Institutions", icon: <School className="h-6 w-6" /> }, 
+    { name: "Data Centers", icon: <Factory className="h-6 w-6" /> }, 
+    { name: "Manufacturing Facilities", icon: <Factory className="h-6 w-6" /> }, 
+    { name: "Mixed-Use Buildings", icon: <Building2 className="h-6 w-6" /> }
   ];
 
   return (
@@ -45,7 +51,7 @@ const VRVSystem = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
+        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16" style={{backgroundImage: "url('/src/assets/vrv-system.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
@@ -62,10 +68,7 @@ const VRVSystem = () => {
             <div className="flex flex-wrap gap-4">
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
-                Get Project Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Technical Consultation
+                Get Best Price Quote
               </Button>
             </div>
           </div>
@@ -107,11 +110,13 @@ const VRVSystem = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {applications.map((app, index) => (
                 <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <Building2 className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <span className="font-medium">{app}</span>
+                  <div className="text-primary mx-auto mb-2">
+                    {app.icon}
+                  </div>
+                  <span className="font-medium">{app.name}</span>
                 </div>
               ))}
             </div>
@@ -215,21 +220,18 @@ const VRVSystem = () => {
         {/* Local Service Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
                 VRV System Installation in Bareilly
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-                Complete VRV system solutions for commercial projects across Bareilly district. 
-                From design to installation and maintenance - your trusted HVAC partner.
+                Complete VRV system solutions across Bareilly district. From design consultation 
+                to installation and commissioning - your partner for premium HVAC systems.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
                   Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Schedule Site Visit
                 </Button>
               </div>
             </div>

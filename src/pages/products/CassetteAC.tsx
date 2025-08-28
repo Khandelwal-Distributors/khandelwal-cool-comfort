@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, ArrowLeft, Star, Wind, Building, Eye, Thermometer } from "lucide-react";
+import { Phone, ArrowLeft, Star, Wind, Building, Eye, Thermometer, Hotel, ShoppingBag, Hospital } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import cassetteAc from "@/assets/cassette-ac.jpg";
@@ -26,8 +26,14 @@ const CassetteAC = () => {
   ];
 
   const applications = [
-    "Office Spaces", "Retail Stores", "Restaurants", "Hotel Lobbies", 
-    "Conference Rooms", "Showrooms", "Clinics", "Reception Areas"
+    { name: "Office Spaces", icon: <Building className="h-6 w-6" /> }, 
+    { name: "Retail Stores", icon: <ShoppingBag className="h-6 w-6" /> }, 
+    { name: "Restaurants", icon: <Hotel className="h-6 w-6" /> }, 
+    { name: "Hotel Lobbies", icon: <Hotel className="h-6 w-6" /> },
+    { name: "Conference Rooms", icon: <Building className="h-6 w-6" /> }, 
+    { name: "Showrooms", icon: <ShoppingBag className="h-6 w-6" /> }, 
+    { name: "Clinics", icon: <Hospital className="h-6 w-6" /> }, 
+    { name: "Reception Areas", icon: <Building className="h-6 w-6" /> }
   ];
 
   return (
@@ -45,7 +51,7 @@ const CassetteAC = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
+        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16" style={{backgroundImage: "url('/src/assets/cassette-ac.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
@@ -62,10 +68,7 @@ const CassetteAC = () => {
             <div className="flex flex-wrap gap-4">
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
-                Get Commercial Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Site Survey
+                Get Best Price Quote
               </Button>
             </div>
           </div>
@@ -110,8 +113,10 @@ const CassetteAC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
               {applications.map((app, index) => (
                 <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <Building className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <span className="font-medium">{app}</span>
+                  <div className="text-primary mx-auto mb-2">
+                    {app.icon}
+                  </div>
+                  <span className="font-medium">{app.name}</span>
                 </div>
               ))}
             </div>
@@ -175,21 +180,18 @@ const CassetteAC = () => {
         {/* Local Service Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
-                Commercial AC Installation in Bareilly
+                Cassette AC Installation & Service in Bareilly
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-                Specialized cassette AC installation for commercial spaces across Bareilly district. 
-                False ceiling work, electrical connections, and comprehensive project management.
+                Professional ceiling cassette AC installation across Bareilly district. 
+                Expert false ceiling work, electrical connections, and comprehensive service support.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
                   Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Project Consultation
                 </Button>
               </div>
             </div>
