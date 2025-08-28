@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hvac-hero.jpg";
 
 const Hero = () => {
@@ -32,8 +33,8 @@ const Hero = () => {
               <Phone className="h-5 w-5" />
               Call Now - Free Consultation
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
-              View Products
+            <Button asChild variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+              <Link to="/products">View Products</Link>
             </Button>
           </div>
           
