@@ -25,15 +25,7 @@ const Header = () => {
           </div>
           
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm">
-              <Phone className="h-4 w-4 text-primary" />
-              <span className="font-medium">Call Now:</span>
-              <a href="tel:+919876543210" className="text-primary hover:underline">
-                +91 98765 43210
-              </a>
-            </div>
-            
-            <Button 
+            <Button
               variant="cta" 
               size="sm"
               onClick={() => window.open('tel:+919876543210')}
