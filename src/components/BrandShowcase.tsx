@@ -2,14 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Star, Award } from "lucide-react";
 
+// Import brand logos
+import daikinLogo from "@/assets/brands/daikin-logo.jpg";
+import mitsubishiLogo from "@/assets/brands/mitsubishi-logo.jpg";
+import carrierLogo from "@/assets/brands/carrier-logo.jpg";
+import amstradLogo from "@/assets/brands/amstrad-logo.jpg";
+import mideaLogo from "@/assets/brands/midea-logo.jpg";
+import godrejLogo from "@/assets/brands/godrej-logo.jpg";
+import cruiseLogo from "@/assets/brands/cruise-logo.jpg";
+import voltasLogo from "@/assets/brands/voltas-logo.jpg";
+
 const brands = [
-  { name: "Daikin", specialty: "Premium VRV Systems", featured: true },
-  { name: "Mitsubishi Heavy", specialty: "Heavy Duty Commercial" },
-  { name: "Carrier", specialty: "Reliable Cooling" },
-  { name: "Amstrad", specialty: "Budget Friendly" },
-  { name: "Midea", specialty: "Energy Efficient" },
-  { name: "Godrej", specialty: "Indian Excellence" },
-  { name: "Cruise", specialty: "Compact Solutions" },
+  { name: "Daikin", specialty: "Premium VRV Systems", featured: true, logo: daikinLogo },
+  { name: "Mitsubishi Heavy", specialty: "Heavy Duty Commercial", logo: mitsubishiLogo },
+  { name: "Carrier", specialty: "Reliable Cooling", logo: carrierLogo },
+  { name: "Voltas", specialty: "India's No.1 AC", logo: voltasLogo },
+  { name: "Amstrad", specialty: "Budget Friendly", logo: amstradLogo },
+  { name: "Midea", specialty: "Energy Efficient", logo: mideaLogo },
+  { name: "Godrej", specialty: "Indian Excellence", logo: godrejLogo },
+  { name: "Cruise", specialty: "Compact Solutions", logo: cruiseLogo },
 ];
 
 const BrandShowcase = () => {
@@ -30,16 +41,23 @@ const BrandShowcase = () => {
           {brands.map((brand, index) => (
             <Card 
               key={index} 
-              className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 ${
+              className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 ${
                 brand.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-primary/10' : ''
               }`}
             >
               <CardContent className="p-6 text-center">
                 {brand.featured && (
-                  <div className="flex justify-center mb-2">
+                  <div className="flex justify-center mb-3">
                     <Award className="h-5 w-5 text-accent-warm" />
                   </div>
                 )}
+                <div className="mb-4 flex justify-center">
+                  <img 
+                    src={brand.logo} 
+                    alt={`${brand.name} logo`}
+                    className="h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <h3 className="font-bold text-lg mb-2 text-primary">{brand.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{brand.specialty}</p>
                 {brand.featured && (
