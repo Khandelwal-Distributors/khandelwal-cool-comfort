@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, ArrowLeft, Star, Wind, Fan, Zap, Home } from "lucide-react";
+import { Phone, ArrowLeft, Star, Wind, Fan, Zap, Home, Building, Hospital, School, Hotel, Factory } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import ventilationHrv from "@/assets/ventilation-hrv.jpg";
@@ -76,8 +76,9 @@ const VentilationHRV = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
-          <div className="container mx-auto px-4">
+        <section className="relative py-16" style={{backgroundImage: `url(${ventilationHrv})`}}>
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
                 <ArrowLeft className="h-6 w-6" />
@@ -93,10 +94,7 @@ const VentilationHRV = () => {
             <div className="flex flex-wrap gap-4">
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
-                Get Ventilation Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Air Quality Assessment
+                Get Best Price Quote
               </Button>
             </div>
           </div>
@@ -170,12 +168,18 @@ const VentilationHRV = () => {
               <h3 className="text-2xl font-bold text-primary mb-6">Ventilation Applications</h3>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {applications.map((app, index) => (
-                <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <Wind className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <span className="font-medium">{app}</span>
-                </div>
-              ))}
+              {applications.map((app, index) => {
+                const icons = [Home, Building, Hospital, School, Hotel, Factory, Building, Wind];
+                const Icon = icons[index] || Wind;
+                return (
+                  <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                    <div className="flex justify-center mb-2">
+                      <Icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <span className="font-medium">{app}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -326,7 +330,7 @@ const VentilationHRV = () => {
         {/* Local Service Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
                 Ventilation System Installation in Bareilly
               </h2>
@@ -337,10 +341,7 @@ const VentilationHRV = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
-                  Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Schedule Air Test
+                  Get Best Price Quote
                 </Button>
               </div>
             </div>

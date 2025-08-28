@@ -76,8 +76,9 @@ const AHUSystem = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16">
-          <div className="container mx-auto px-4">
+        <section className="relative py-16" style={{backgroundImage: `url(${ahuSystem})`}}>
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/products" className="text-white hover:text-accent-warm transition-colors">
                 <ArrowLeft className="h-6 w-6" />
@@ -93,10 +94,7 @@ const AHUSystem = () => {
             <div className="flex flex-wrap gap-4">
               <Button variant="cta" size="lg">
                 <Phone className="h-5 w-5" />
-                Get AHU System Quote
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                Engineering Consultation
+                Get Best Price Quote
               </Button>
             </div>
           </div>
@@ -172,7 +170,9 @@ const AHUSystem = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {applications.map((app, index) => (
                 <div key={index} className="bg-card border rounded-lg p-4 text-center hover:shadow-md transition-shadow">
-                  <Building className="h-8 w-8 text-primary mx-auto mb-2" />
+                  <div className="flex justify-center mb-2">
+                    <Building className="h-8 w-8 text-primary" />
+                  </div>
                   <span className="font-medium">{app}</span>
                 </div>
               ))}
@@ -322,7 +322,7 @@ const AHUSystem = () => {
         {/* Local Service Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+            <div className="bg-primary rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-4">
                 AHU System Installation in Bareilly
               </h2>
@@ -333,10 +333,7 @@ const AHUSystem = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button variant="secondary" size="lg">
                   <Phone className="h-5 w-5" />
-                  Call: +91-XXXXX-XXXXX
-                </Button>
-                <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
-                  Engineering Consultation
+                  Get Best Price Quote
                 </Button>
               </div>
             </div>
