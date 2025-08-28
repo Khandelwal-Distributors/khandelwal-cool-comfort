@@ -35,7 +35,7 @@ const EndOfSeasonSale = () => {
                 alt="Air Conditioner Sale"
                 className="w-full h-40 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="bg-accent-warm text-accent-warm-foreground font-bold text-2xl py-3 px-6 rounded-lg shadow-[var(--shadow-cta)]">
+              <div className="bg-primary text-primary-foreground font-bold text-2xl py-3 px-6 rounded-lg shadow-[var(--shadow-cta)]">
                 Starting at ₹26,000/-
               </div>
             </CardHeader>
