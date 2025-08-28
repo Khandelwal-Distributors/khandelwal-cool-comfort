@@ -64,11 +64,13 @@ const EndOfSeasonSale = () => {
                   </div>
                 </div>
               </div>
+            </CardContent>
+            <div className="p-6 pt-0">
               <Button variant="cta" className="w-full">
                 <Phone className="h-4 w-4" />
                 Get Instant Quote
               </Button>
-            </CardContent>
+            </div>
           </Card>
 
           {/* Premium Brands Card */}
@@ -201,11 +203,13 @@ const EndOfSeasonSale = () => {
                   <span className="font-medium">ACs on Rent</span>
                 </div>
               </div>
-              <Button variant="cta" className="w-full mt-4">
+            </CardContent>
+            <div className="p-6 pt-0">
+              <Button variant="cta" className="w-full">
                 <Phone className="h-4 w-4" />
                 Get Instant Quote
               </Button>
-            </CardContent>
+            </div>
           </Card>
         </div>
       </div>

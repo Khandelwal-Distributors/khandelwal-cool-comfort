@@ -6,6 +6,9 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import EndOfSeasonSale from "@/components/EndOfSeasonSale";
+import YouTubeVideos from "@/components/YouTubeVideos";
+import StoreProfiles from "@/components/StoreProfiles";
+import BrochureDownload from "@/components/BrochureDownload";
 
 const Index = () => {
   return (
@@ -17,6 +20,9 @@ const Index = () => {
         <ProductCategories />
         <Services />
         <EndOfSeasonSale />
+        <YouTubeVideos />
+        <StoreProfiles />
+        <BrochureDownload />
         <Contact />
       </main>
       <Footer />
