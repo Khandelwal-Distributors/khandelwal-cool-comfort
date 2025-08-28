@@ -161,14 +161,14 @@ const EndOfSeasonSale = () => {
           </Card>
 
           {/* Benefits Card */}
-          <Card className="hover:shadow-[var(--shadow-card)] transition-all duration-300">
+          <Card className="hover:shadow-[var(--shadow-card)] transition-all duration-300 flex flex-col">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Gift className="h-5 w-5 text-accent-warm" />
                 Exclusive Benefits
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-grow">
               <div className="space-y-3">
                 <div className="flex items-center gap-3 bg-muted rounded-lg p-3">
                   <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">30%</div>
@@ -204,7 +204,7 @@ const EndOfSeasonSale = () => {
                 </div>
               </div>
             </CardContent>
-            <div className="p-6 pt-0">
+            <div className="p-6 pt-0 mt-auto">
               <Button variant="cta" className="w-full">
                 <Phone className="h-4 w-4" />
                 Get Instant Quote
