@@ -201,6 +201,10 @@ const EndOfSeasonSale = () => {
                   <span className="font-medium">ACs on Rent</span>
                 </div>
               </div>
+              <Button variant="cta" className="w-full mt-4">
+                <Phone className="h-4 w-4" />
+                Get Instant Quote
+              </Button>
             </CardContent>
           </Card>
         </div>

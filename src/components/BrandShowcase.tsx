@@ -37,25 +37,25 @@ const BrandShowcase = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {brands.map((brand, index) => (
             <Card 
               key={index} 
-              className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 ${
+              className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 overflow-hidden ${
                 brand.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-primary/10' : ''
               }`}
             >
-              <CardContent className="p-4 text-center">
+              <CardContent className="p-0 relative">
                 {brand.featured && (
-                  <div className="flex justify-center mb-2">
+                  <div className="absolute top-2 right-2 z-10">
                     <Award className="h-4 w-4 text-accent-warm" />
                   </div>
                 )}
-                <div className="flex justify-center">
+                <div className="h-20 flex items-center justify-center bg-white p-2">
                   <img 
                     src={brand.logo} 
                     alt={`${brand.name} logo`}
-                    className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </CardContent>
