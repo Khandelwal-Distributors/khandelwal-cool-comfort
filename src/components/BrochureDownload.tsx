@@ -47,7 +47,11 @@ const BrochureDownload = () => {
               <div className="text-center">
                 <div className="bg-muted rounded-lg p-8 mb-6">
                   <div className="bg-background rounded-lg p-6 shadow-sm">
-                    <FileText className="h-16 w-16 text-primary mx-auto mb-4" />
+                    <img 
+                      src="/lovable-uploads/253ff299-0035-4525-90a9-5b15b36d4e69.png" 
+                      alt="Brand logo" 
+                      className="h-16 w-16 mx-auto mb-4 object-contain"
+                    />
                     <h3 className="font-semibold text-lg mb-2">Product Brochure</h3>
                     <p className="text-sm text-muted-foreground mb-1">PDF Format • 2.5 MB</p>
                     <p className="text-xs text-muted-foreground">Updated: December 2024</p>
