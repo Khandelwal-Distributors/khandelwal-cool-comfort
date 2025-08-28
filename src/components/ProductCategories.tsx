@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Home, Building, Droplets, Wind } from "lucide-react";
+import { Phone, Home, Building, Droplets, Wind, Hotel, Cross, GraduationCap, Dumbbell, Scissors, BriefcaseBusiness, ShoppingBag, Factory } from "lucide-react";
 import acCollection from "@/assets/ac-collection.jpg";
 import commercialHvac from "@/assets/commercial-hvac.jpg";
 
@@ -120,18 +120,18 @@ const ProductCategories = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "Hotels & Restaurants",
-              "Hospitals & Clinics", 
-              "Schools & Colleges",
-              "Gyms & Fitness Centers",
-              "Salons & Spas",
-              "Offices & IT Parks",
-              "Retail Stores",
-              "Industrial Buildings"
+              { name: "Hotels & Restaurants", icon: Hotel },
+              { name: "Hospitals & Clinics", icon: Cross },
+              { name: "Schools & Colleges", icon: GraduationCap },
+              { name: "Gyms & Fitness Centers", icon: Dumbbell },
+              { name: "Salons & Spas", icon: Scissors },
+              { name: "Offices & IT Parks", icon: BriefcaseBusiness },
+              { name: "Retail Stores", icon: ShoppingBag },
+              { name: "Industrial Buildings", icon: Factory }
             ].map((application, index) => (
-              <div key={index} className="text-center p-4 bg-white rounded-lg">
-                <Building className="h-6 w-6 text-primary mx-auto mb-2" />
-                <span className="text-sm font-medium">{application}</span>
+              <div key={index} className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-300">
+                <application.icon className="h-6 w-6 text-primary mx-auto mb-2" />
+                <span className="text-sm font-medium">{application.name}</span>
               </div>
             ))}
           </div>

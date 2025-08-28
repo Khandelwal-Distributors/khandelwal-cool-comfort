@@ -37,7 +37,7 @@ const BrandShowcase = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
           {brands.map((brand, index) => (
             <Card 
               key={index} 
@@ -45,27 +45,19 @@ const BrandShowcase = () => {
                 brand.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-primary/10' : ''
               }`}
             >
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 text-center">
                 {brand.featured && (
-                  <div className="flex justify-center mb-3">
-                    <Award className="h-5 w-5 text-accent-warm" />
+                  <div className="flex justify-center mb-2">
+                    <Award className="h-4 w-4 text-accent-warm" />
                   </div>
                 )}
-                <div className="mb-4 flex justify-center">
+                <div className="flex justify-center">
                   <img 
                     src={brand.logo} 
                     alt={`${brand.name} logo`}
-                    className="h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-primary">{brand.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{brand.specialty}</p>
-                {brand.featured && (
-                  <div className="flex items-center justify-center gap-1 text-xs text-accent-warm mb-2">
-                    <Star className="h-3 w-3 fill-current" />
-                    <span>Exclusive Dealer</span>
-                  </div>
-                )}
               </CardContent>
             </Card>
           ))}
