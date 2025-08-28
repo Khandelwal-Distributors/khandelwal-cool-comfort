@@ -26,6 +26,7 @@ import chillerSystem from "@/assets/chiller-system.jpg";
 import heatPump from "@/assets/heat-pump.jpg";
 import ductableAc from "@/assets/ductable-ac.jpg";
 import EndOfSeasonSale from "@/components/EndOfSeasonSale";
+import productsHeroBg from "@/assets/products-hero-bg.jpg";
 
 const Products = () => {
   const productCategories = [
@@ -180,8 +181,12 @@ const Products = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-primary to-secondary py-16">
-          <div className="container mx-auto px-4">
+        <section 
+          className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${productsHeroBg})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="flex items-center gap-4 mb-6">
               <Link to="/" className="text-white hover:text-accent-warm transition-colors">
                 <ArrowLeft className="h-6 w-6" />
