@@ -1,9 +1,11 @@
+import { useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
@@ -35,48 +37,62 @@ import AHUSystem from "./pages/products/AHUSystem";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <HelmetProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/brands/daikin" element={<Daikin />} />
-            <Route path="/brands/mitsubishi-heavy" element={<MitsubishiHeavy />} />
-            <Route path="/brands/carrier" element={<Carrier />} />
-            <Route path="/brands/voltas" element={<Voltas />} />
-            <Route path="/brands/amstrad" element={<Amstrad />} />
-            <Route path="/brands/midea" element={<Midea />} />
-            <Route path="/brands/godrej" element={<Godrej />} />
-            <Route path="/brands/cruise" element={<Cruise />} />
-            <Route path="/products/inverter-split-ac" element={<InverterSplitAC />} />
-            <Route path="/products/window-ac" element={<WindowAC />} />
-            <Route path="/products/cassette-ac" element={<CassetteAC />} />
-            <Route path="/products/vrv-system" element={<VRVSystem />} />
-            <Route path="/products/water-cooler" element={<WaterCooler />} />
-            <Route path="/products/portable-ac" element={<PortableAC />} />
-            <Route path="/products/solar-water-heater" element={<SolarWaterHeater />} />
-            <Route path="/products/alkaline-ro" element={<AlkalineRO />} />
-            <Route path="/products/chiller-system" element={<ChillerSystem />} />
-            <Route path="/products/non-inverter-split-ac" element={<NonInverterSplitAC />} />
-            <Route path="/products/floor-standing-ac" element={<FloorStandingAC />} />
-            <Route path="/products/heat-pump" element={<HeatPump />} />
-            <Route path="/products/air-purifier" element={<AirPurifier />} />
-            <Route path="/products/ventilation-hrv" element={<VentilationHRV />} />
-            <Route path="/products/ductable-ac" element={<DuctableAC />} />
-            <Route path="/products/cold-room" element={<ColdRoom />} />
-            <Route path="/products/ahu-system" element={<AHUSystem />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </HelmetProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <HelmetProvider>
+          <BrowserRouter>
+            <div className="animate-fade-in">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/brands/daikin" element={<Daikin />} />
+                <Route path="/brands/mitsubishi-heavy" element={<MitsubishiHeavy />} />
+                <Route path="/brands/carrier" element={<Carrier />} />
+                <Route path="/brands/voltas" element={<Voltas />} />
+                <Route path="/brands/amstrad" element={<Amstrad />} />
+                <Route path="/brands/midea" element={<Midea />} />
+                <Route path="/brands/godrej" element={<Godrej />} />
+                <Route path="/brands/cruise" element={<Cruise />} />
+                <Route path="/products/inverter-split-ac" element={<InverterSplitAC />} />
+                <Route path="/products/window-ac" element={<WindowAC />} />
+                <Route path="/products/cassette-ac" element={<CassetteAC />} />
+                <Route path="/products/vrv-system" element={<VRVSystem />} />
+                <Route path="/products/water-cooler" element={<WaterCooler />} />
+                <Route path="/products/portable-ac" element={<PortableAC />} />
+                <Route path="/products/solar-water-heater" element={<SolarWaterHeater />} />
+                <Route path="/products/alkaline-ro" element={<AlkalineRO />} />
+                <Route path="/products/chiller-system" element={<ChillerSystem />} />
+                <Route path="/products/non-inverter-split-ac" element={<NonInverterSplitAC />} />
+                <Route path="/products/floor-standing-ac" element={<FloorStandingAC />} />
+                <Route path="/products/heat-pump" element={<HeatPump />} />
+                <Route path="/products/air-purifier" element={<AirPurifier />} />
+                <Route path="/products/ventilation-hrv" element={<VentilationHRV />} />
+                <Route path="/products/ductable-ac" element={<DuctableAC />} />
+                <Route path="/products/cold-room" element={<ColdRoom />} />
+                <Route path="/products/ahu-system" element={<AHUSystem />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </div>
+          </BrowserRouter>
+        </HelmetProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

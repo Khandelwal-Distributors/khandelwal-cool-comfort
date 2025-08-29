@@ -17,38 +17,38 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight animate-fade-in-up">
             Professional HVAC Solutions & 
             <span className="text-accent-warm"> Air Conditioning </span>
             Services
           </h2>
           
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-xl mb-8 text-white/90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Authorized dealer for Daikin, Mitsubishi Heavy, Carrier & more. 
             Expert installation, servicing & commercial HVAC projects.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button variant="cta" size="lg" className="text-lg px-8">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <Button variant="cta" size="lg" className="text-lg px-8 hover:scale-105 transition-transform duration-300">
               <Phone className="h-5 w-5" />
               Call Now - Free Consultation
             </Button>
-            <Button asChild variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all duration-300">
               <Link to="/products">View Products</Link>
             </Button>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-accent-warm" />
+          <div className="flex flex-col sm:flex-row gap-6 text-sm animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <div className="flex items-center gap-2 hover:text-accent-warm transition-colors duration-300">
+              <CheckCircle className="h-5 w-5 text-accent-warm animate-bounce-gentle" />
               <span>Free Site Visit & Consultation</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-accent-warm" />
+            <div className="flex items-center gap-2 hover:text-accent-warm transition-colors duration-300">
+              <CheckCircle className="h-5 w-5 text-accent-warm animate-bounce-gentle" style={{ animationDelay: '0.5s' }} />
               <span>Expert Installation Team</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-accent-warm" />
+            <div className="flex items-center gap-2 hover:text-accent-warm transition-colors duration-300">
+              <MapPin className="h-5 w-5 text-accent-warm animate-bounce-gentle" style={{ animationDelay: '1s' }} />
               <span>Local Service Area</span>
             </div>
           </div>
