@@ -10,25 +10,25 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Professional HVAC Installation" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover animate-fade-in"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Professional HVAC Solutions & 
             <span className="text-accent-warm"> Air Conditioning </span>
             Services
           </h2>
           
-          <p className="text-xl mb-8 text-white/90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl mb-8 text-white/90">
             Authorized dealer for Daikin, Mitsubishi Heavy, Carrier & more. 
             Expert installation, servicing & commercial HVAC projects.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Button variant="cta" size="lg" className="text-lg px-8 hover:scale-105 transition-transform duration-300">
               <Phone className="h-5 w-5" />
               Call Now - Free Consultation
@@ -38,17 +38,17 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 text-sm animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-col sm:flex-row gap-6 text-sm">
             <div className="flex items-center gap-2 hover:text-accent-warm transition-colors duration-300">
-              <CheckCircle className="h-5 w-5 text-accent-warm animate-bounce-gentle" />
+              <CheckCircle className="h-5 w-5 text-accent-warm" />
               <span>Free Site Visit & Consultation</span>
             </div>
             <div className="flex items-center gap-2 hover:text-accent-warm transition-colors duration-300">
-              <CheckCircle className="h-5 w-5 text-accent-warm animate-bounce-gentle" style={{ animationDelay: '0.5s' }} />
+              <CheckCircle className="h-5 w-5 text-accent-warm" />
               <span>Expert Installation Team</span>
             </div>
             <div className="flex items-center gap-2 hover:text-accent-warm transition-colors duration-300">
-              <MapPin className="h-5 w-5 text-accent-warm animate-bounce-gentle" style={{ animationDelay: '1s' }} />
+              <MapPin className="h-5 w-5 text-accent-warm" />
               <span>Local Service Area</span>
             </div>
           </div>

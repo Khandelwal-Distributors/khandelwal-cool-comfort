@@ -115,4 +115,14 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Global image fade-in animation */
+  img {
+    @apply animate-fade-in;
+  }
+  
+  /* Smooth image loading */
+  img:not([src]) {
+    @apply opacity-0;
+  }
 }
