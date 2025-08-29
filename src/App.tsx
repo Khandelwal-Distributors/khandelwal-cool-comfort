@@ -3,9 +3,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import LoadingScreen from "@/components/LoadingScreen";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
@@ -38,13 +39,17 @@ import AHUSystem from "./pages/products/AHUSystem";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isFirstLoad, setIsFirstLoad] = useState(() => {
+    // Check if this is the first load of the session
+    return !sessionStorage.getItem('hasLoaded');
+  });
 
   const handleLoadingComplete = () => {
-    setIsLoading(false);
+    sessionStorage.setItem('hasLoaded', 'true');
+    setIsFirstLoad(false);
   };
 
-  if (isLoading) {
+  if (isFirstLoad) {
     return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
   }
 
@@ -55,6 +60,7 @@ const App = () => {
         <Sonner />
         <HelmetProvider>
           <BrowserRouter>
+            <ScrollToTop />
             <div className="animate-fade-in">
               <Routes>
                 <Route path="/" element={<Index />} />

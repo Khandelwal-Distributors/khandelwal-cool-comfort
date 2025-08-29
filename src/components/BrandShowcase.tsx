@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Star, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Import brand logos
 import daikinLogo from "@/assets/brands/daikin-logo.jpg";
@@ -39,33 +40,29 @@ const BrandShowcase = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {brands.map((brand, index) => (
-            <Card 
-              key={index} 
-              className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer animate-scale-in ${
-                brand.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-primary/10' : ''
-              }`}
-              style={{ animationDelay: `${0.1 * index}s` }}
-              onClick={() => {
-                if (brand.link) {
-                  window.location.href = brand.link;
-                }
-              }}
-            >
-              <CardContent className="p-0 relative">
-                {brand.featured && (
-                  <div className="absolute top-2 right-2 z-10">
-                    <Award className="h-4 w-4 text-accent-warm animate-pulse-subtle" />
+            <Link key={index} to={brand.link || "#"}>
+              <Card 
+                className={`group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer animate-scale-in ${
+                  brand.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-primary/10' : ''
+                }`}
+                style={{ animationDelay: `${0.1 * index}s` }}
+              >
+                <CardContent className="p-0 relative">
+                  {brand.featured && (
+                    <div className="absolute top-2 right-2 z-10">
+                      <Award className="h-4 w-4 text-accent-warm animate-pulse-subtle" />
+                    </div>
+                  )}
+                  <div className="h-20 flex items-center justify-center bg-white p-2">
+                    <img 
+                      src={brand.logo} 
+                      alt={`${brand.name} logo`}
+                      className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                )}
-                <div className="h-20 flex items-center justify-center bg-white p-2">
-                  <img 
-                    src={brand.logo} 
-                    alt={`${brand.name} logo`}
-                    className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
         
