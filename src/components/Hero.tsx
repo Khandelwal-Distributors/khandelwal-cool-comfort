@@ -11,6 +11,7 @@ const Hero = () => {
           src={heroImage} 
           alt="Professional HVAC Installation" 
           className="w-full h-full object-cover animate-fade-in"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
       </div>
