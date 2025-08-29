@@ -29,13 +29,12 @@ const EndOfSeasonSale = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Main Sale Card */}
           <Card className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 lg:col-span-1">
-            <CardHeader className="text-center pb-4">
-              <img 
-                src={cleanSaleBanner} 
-                alt="Air Conditioner Sale"
-                className="w-full h-40 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="bg-primary text-primary-foreground font-bold text-2xl py-3 px-6 rounded-lg shadow-[var(--shadow-cta)]">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <CreditCard className="h-5 w-5 text-accent-warm" />
+                Unbeatable Prices
+              </CardTitle>
+              <div className="bg-primary text-primary-foreground font-bold text-2xl py-3 px-6 rounded-lg shadow-[var(--shadow-cta)] text-center mt-4">
                 Starting at ₹26,000/-
               </div>
             </CardHeader>
@@ -144,20 +143,14 @@ const EndOfSeasonSale = () => {
                     <p className="text-xs text-muted-foreground">From ₹35,000</p>
                   </div>
                 </div>
-                
-                <div className="bg-muted rounded-lg p-4 text-center">
-                  <p className="font-semibold text-sm mb-2">All models available with</p>
-                  <div className="flex items-center justify-center gap-4 text-xs">
-                    <span className="flex items-center gap-1">
-                      <Star className="h-3 w-3 text-accent-warm" />
-                      3-5 Star Rating
-                    </span>
-                    <span>1-2 Ton Capacity</span>
-                    <span>Inverter & Non-Inverter</span>
-                  </div>
-                </div>
               </div>
             </CardContent>
+            <div className="p-6 pt-0">
+              <Button variant="cta" className="w-full">
+                <Phone className="h-4 w-4" />
+                Get Instant Quote
+              </Button>
+            </div>
           </Card>
 
           {/* Benefits Card */}
