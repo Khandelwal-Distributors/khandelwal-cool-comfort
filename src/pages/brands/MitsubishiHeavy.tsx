@@ -9,6 +9,8 @@ import mitsubishiLogo from "@/assets/brands/mitsubishi-logo.jpg";
 import commercialHVAC from "@/assets/commercial-hvac.jpg";
 import floorStandingAC from "@/assets/floor-standing-ac.jpg";
 import chillerSystem from "@/assets/chiller-system.jpg";
+import splitAC from "@/assets/split-ac.jpg";
+import cassetteAC from "@/assets/cassette-ac.jpg";
 
 const MitsubishiHeavy = () => {
   const products = [
@@ -21,13 +23,13 @@ const MitsubishiHeavy = () => {
     {
       name: "Split AC Units",
       description: "Heavy-duty split ACs for demanding applications",
-      image: "/src/assets/split-ac.jpg",
+      image: splitAC,
       features: ["Industrial Grade", "High Performance", "Reliable Operation"]
     },
     {
       name: "Cassette AC",
       description: "Commercial cassette units for office and retail spaces",
-      image: "/src/assets/cassette-ac.jpg",
+      image: cassetteAC,
       features: ["360° Air Distribution", "Commercial Grade", "Easy Maintenance"]
     }
   ];
