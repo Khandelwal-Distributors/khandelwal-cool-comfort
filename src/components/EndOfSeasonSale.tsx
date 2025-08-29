@@ -28,17 +28,17 @@ const EndOfSeasonSale = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Main Sale Card */}
-          <Card className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 lg:col-span-1">
+          <Card className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 lg:col-span-1 flex flex-col">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <CreditCard className="h-5 w-5 text-accent-warm" />
                 Unbeatable Prices
               </CardTitle>
-              <div className="bg-primary text-primary-foreground font-bold text-2xl py-3 px-6 rounded-lg shadow-[var(--shadow-cta)] text-center mt-4">
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <div className="bg-primary text-primary-foreground font-bold text-2xl py-3 px-6 rounded-lg shadow-[var(--shadow-cta)] text-center mb-6">
                 Starting at ₹26,000/-
               </div>
-            </CardHeader>
-            <CardContent>
               <div className="space-y-4 mb-6">
                 <div className="bg-muted rounded-lg p-4">
                   <p className="font-semibold text-sm mb-2">Premium Brands Available</p>
