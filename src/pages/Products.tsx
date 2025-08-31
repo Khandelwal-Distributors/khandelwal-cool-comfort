@@ -179,7 +179,7 @@ const Products = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section 
           className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16 bg-cover bg-center bg-no-repeat"

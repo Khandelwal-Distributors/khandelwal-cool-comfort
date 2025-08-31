@@ -64,7 +64,7 @@ const HeatPump = () => {
 
       <Header />
       
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="relative py-16" style={{backgroundImage: `url(${heatPump})`}}>
           <div className="absolute inset-0 bg-black/40"></div>

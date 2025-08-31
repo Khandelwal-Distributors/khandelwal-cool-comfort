@@ -38,7 +38,7 @@ const InverterSplitAC = () => {
 
       <Header />
       
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-primary/90 to-secondary/90 py-16" style={{backgroundImage: "url('/src/assets/inverter-split-ac.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <div className="absolute inset-0 bg-black/40"></div>
