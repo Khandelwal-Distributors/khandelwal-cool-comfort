@@ -116,13 +116,18 @@
     @apply bg-background text-foreground;
   }
   
-  /* Global image fade-in animation */
+  /* Optimized image loading without global animation */
   img {
-    @apply animate-fade-in;
+    @apply transition-opacity duration-300;
   }
   
-  /* Smooth image loading */
+  /* Images load with opacity for smooth transition */
   img:not([src]) {
     @apply opacity-0;
+  }
+  
+  /* Only animate specific images */
+  .img-fade-in {
+    @apply animate-fade-in;
   }
 }

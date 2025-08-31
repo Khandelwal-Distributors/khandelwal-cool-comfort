@@ -10,8 +10,10 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Professional HVAC Installation" 
-          className="w-full h-full object-cover animate-fade-in"
+          className="w-full h-full object-cover img-fade-in"
           loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
       </div>
