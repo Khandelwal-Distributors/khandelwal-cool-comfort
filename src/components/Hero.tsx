@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hvac-hero.jpg";
+import NumberCounter from "@/components/NumberCounter";
 
 const Hero = () => {
   return (
@@ -53,6 +54,27 @@ const Hero = () => {
             <div className="flex items-center gap-2 hover:text-accent-warm transition-colors duration-300">
               <MapPin className="h-5 w-5 text-accent-warm" />
               <span>Local Service Area</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent-warm mb-2">
+                <NumberCounter end={50000} suffix="+" />
+              </div>
+              <p className="text-sm text-white/80 font-medium">AC Installations</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent-warm mb-2">
+                <NumberCounter end={500} suffix="+" />
+              </div>
+              <p className="text-sm text-white/80 font-medium">Projects</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent-warm mb-2">
+                <NumberCounter end={25} suffix="+" />
+              </div>
+              <p className="text-sm text-white/80 font-medium">Years of Experience</p>
             </div>
           </div>
         </div>
